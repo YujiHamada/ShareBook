@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseUI
+import FirebaseDynamicLinks
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +19,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        
+        if Auth.auth().currentUser != nil {
+            let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
+            let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+            window?.rootViewController = tabBarController
+        }
+        
         return true
     }
 
@@ -39,6 +50,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//
+//        if String(url.absoluteString.prefix(2)) == "fb" {
+//            return  ApplicationDelegate.shared.application(app, open: url, options: options)
+//        }
+//
+//        return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+//    }
+    
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        guard let url = userActivity.webpageURL else { return true }
+        let handled = DynamicLinks.dynamicLinks().handleUniversalLink(url) { [weak self] (link, _) in
+            guard let linkURL = link?.url else { return }
+            self?.handlePasswordlessSignIn(withURL: linkURL)
+        }
+        return handled
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+    }
+    
+    func handleOpenUrl(_ url: URL, sourceApplication: String?) -> Bool {
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        // other URL handling goes here.
+        return false
+    }
+    
+    func handlePasswordlessSignIn(withURL url: URL) {
+        let link = url.absoluteString
+        if Auth.auth().isSignIn(withEmailLink: link) {
+            Auth.auth().signIn(withEmail: UserDefaults.standard.string(forKey: MailLoginViewController.authEmail)!, link: link) { (result, error) in
+                if let error = error {
+                    print(error)
+                    return
+                }
+                print(result?.user)
+            }
+        }
     }
 
 

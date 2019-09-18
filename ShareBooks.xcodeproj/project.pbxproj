@@ -7,21 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488152316BF360029F5DB /* MyPage.storyboard */; };
+		CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488192316C11A0029F5DB /* Account.storyboard */; };
+		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
+		CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */; };
+		CA4488202316C8A80029F5DB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881F2316C8A80029F5DB /* UserManager.swift */; };
 		CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */; };
-		CAB5B126230E2EE300DCEB34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* ViewController.swift */; };
+		CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */; };
 		CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B127230E2EE300DCEB34 /* Main.storyboard */; };
 		CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B12A230E2EE500DCEB34 /* Assets.xcassets */; };
 		CAB5B12E230E2EE500DCEB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B12C230E2EE500DCEB34 /* LaunchScreen.storyboard */; };
+		CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */; };
+		CAB5B13D230E690300DCEB34 /* MailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B13C230E690300DCEB34 /* MailLoginViewController.swift */; };
+		CAB5B13F230E691100DCEB34 /* MailLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B13E230E691100DCEB34 /* MailLogin.storyboard */; };
+		CAB5B141230E6B3E00DCEB34 /* UIAlertController+Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B140230E6B3E00DCEB34 /* UIAlertController+Simple.swift */; };
+		CAB5B143230E8C2100DCEB34 /* UIApplication+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B142230E8C2000DCEB34 /* UIApplication+ViewController.swift */; };
+		CAB5B145230E8C3D00DCEB34 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B144230E8C3D00DCEB34 /* Tabbar.storyboard */; };
+		CAB5B14A230E8EE500DCEB34 /* SearchBooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B148230E8EE500DCEB34 /* SearchBooksViewController.swift */; };
+		CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B14E230E908900DCEB34 /* SearchBooks.storyboard */; };
+		CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B150230E948F00DCEB34 /* SearchBookCollectionViewCell.swift */; };
+		CAC57545230EE7E400BF407E /* VolumeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC57544230EE7E400BF407E /* VolumeInfo.swift */; };
+		CAC5754723102AE900BF407E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5754623102AE900BF407E /* TabBarController.swift */; };
+		CAC575492310D2BF00BF407E /* BookItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC575482310D2BF00BF407E /* BookItem.swift */; };
+		CAC5754C231252CE00BF407E /* DetailBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5754A231252CE00BF407E /* DetailBookViewController.swift */; };
+		CAC5754F23125FB400BF407E /* DetailBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC5754E23125FB400BF407E /* DetailBook.storyboard */; };
+		CAC575522312C02200BF407E /* CaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC575512312C02200BF407E /* CaptureViewController.swift */; };
+		CAC575542312C09A00BF407E /* Capture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC575532312C09A00BF407E /* Capture.storyboard */; };
+		CAC575562312C0CC00BF407E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC575552312C0CC00BF407E /* ResultViewController.swift */; };
+		CAC575582312C0D600BF407E /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC575572312C0D600BF407E /* Result.storyboard */; };
+		CAD6B8E823289C7D00988F82 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6B8E723289C7D00988F82 /* RequestManager.swift */; };
+		CAD6B8EB23289D1C00988F82 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6B8EA23289D1C00988F82 /* Api.swift */; };
+		CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */; };
+		DBADBCE3B67F97F75CD83CDF /* Pods_ShareBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		608916E1DD672BC26D6BECA2 /* Pods-ShareBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks.release.xcconfig"; sourceTree = "<group>"; };
+		9F368772EA0BC02ED7D05773 /* Pods-ShareBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA4488152316BF360029F5DB /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		CA4488192316C11A0029F5DB /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
+		CA44881F2316C8A80029F5DB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		CAB5B120230E2EE300DCEB34 /* ShareBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CAB5B125230E2EE300DCEB34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAB5B128230E2EE300DCEB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAB5B12A230E2EE500DCEB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB5B12D230E2EE500DCEB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB5B12F230E2EE500DCEB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAB5B13B230E311E00DCEB34 /* ShareBooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareBooks.entitlements; sourceTree = "<group>"; };
+		CAB5B13C230E690300DCEB34 /* MailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailLoginViewController.swift; sourceTree = "<group>"; };
+		CAB5B13E230E691100DCEB34 /* MailLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MailLogin.storyboard; sourceTree = "<group>"; };
+		CAB5B140230E6B3E00DCEB34 /* UIAlertController+Simple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Simple.swift"; sourceTree = "<group>"; };
+		CAB5B142230E8C2000DCEB34 /* UIApplication+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+ViewController.swift"; sourceTree = "<group>"; };
+		CAB5B144230E8C3D00DCEB34 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		CAB5B148230E8EE500DCEB34 /* SearchBooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksViewController.swift; sourceTree = "<group>"; };
+		CAB5B14E230E908900DCEB34 /* SearchBooks.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchBooks.storyboard; sourceTree = "<group>"; };
+		CAB5B150230E948F00DCEB34 /* SearchBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCollectionViewCell.swift; sourceTree = "<group>"; };
+		CAC57544230EE7E400BF407E /* VolumeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeInfo.swift; sourceTree = "<group>"; };
+		CAC5754623102AE900BF407E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CAC575482310D2BF00BF407E /* BookItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookItem.swift; sourceTree = "<group>"; };
+		CAC5754A231252CE00BF407E /* DetailBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewController.swift; sourceTree = "<group>"; };
+		CAC5754E23125FB400BF407E /* DetailBook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailBook.storyboard; sourceTree = "<group>"; };
+		CAC575512312C02200BF407E /* CaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViewController.swift; sourceTree = "<group>"; };
+		CAC575532312C09A00BF407E /* Capture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Capture.storyboard; sourceTree = "<group>"; };
+		CAC575552312C0CC00BF407E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		CAC575572312C0D600BF407E /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		CAD6B8E723289C7D00988F82 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		CAD6B8EA23289D1C00988F82 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +86,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBADBCE3B67F97F75CD83CDF /* Pods_ShareBooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		102DB3E46F6D4034CFAC057C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F368772EA0BC02ED7D05773 /* Pods-ShareBooks.debug.xcconfig */,
+				608916E1DD672BC26D6BECA2 /* Pods-ShareBooks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		444CD857FCA4B54D78677D8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA448821231A45890029F5DB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */,
+				CAB5B127230E2EE300DCEB34 /* Main.storyboard */,
+				CAB5B13C230E690300DCEB34 /* MailLoginViewController.swift */,
+				CAB5B13E230E691100DCEB34 /* MailLogin.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		CAB5B117230E2EE300DCEB34 = {
 			isa = PBXGroup;
 			children = (
 				CAB5B122230E2EE300DCEB34 /* ShareBooks */,
 				CAB5B121230E2EE300DCEB34 /* Products */,
+				102DB3E46F6D4034CFAC057C /* Pods */,
+				444CD857FCA4B54D78677D8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +142,94 @@
 		CAB5B122230E2EE300DCEB34 /* ShareBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CAD6B8EE23325F6800988F82 /* New Group */,
+				CAD6B8E923289D1100988F82 /* Enum */,
+				CA448821231A45890029F5DB /* Login */,
+				CAC575592316BEE800BF407E /* MyPage */,
+				CAC575502312BF3F00BF407E /* CaptureBarCode */,
+				CAC57543230EE73C00BF407E /* Model */,
+				CAB5B147230E8CA700DCEB34 /* Extensions */,
+				CAB5B146230E8C9400DCEB34 /* SearchBooks */,
+				CAB5B13B230E311E00DCEB34 /* ShareBooks.entitlements */,
+				CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */,
 				CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */,
-				CAB5B125230E2EE300DCEB34 /* ViewController.swift */,
-				CAB5B127230E2EE300DCEB34 /* Main.storyboard */,
 				CAB5B12A230E2EE500DCEB34 /* Assets.xcassets */,
 				CAB5B12C230E2EE500DCEB34 /* LaunchScreen.storyboard */,
 				CAB5B12F230E2EE500DCEB34 /* Info.plist */,
+				CAB5B144230E8C3D00DCEB34 /* Tabbar.storyboard */,
+				CAC5754623102AE900BF407E /* TabBarController.swift */,
 			);
 			path = ShareBooks;
+			sourceTree = "<group>";
+		};
+		CAB5B146230E8C9400DCEB34 /* SearchBooks */ = {
+			isa = PBXGroup;
+			children = (
+				CAB5B148230E8EE500DCEB34 /* SearchBooksViewController.swift */,
+				CAB5B14E230E908900DCEB34 /* SearchBooks.storyboard */,
+				CAB5B150230E948F00DCEB34 /* SearchBookCollectionViewCell.swift */,
+				CAC5754A231252CE00BF407E /* DetailBookViewController.swift */,
+				CAC5754E23125FB400BF407E /* DetailBook.storyboard */,
+			);
+			path = SearchBooks;
+			sourceTree = "<group>";
+		};
+		CAB5B147230E8CA700DCEB34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CAB5B142230E8C2000DCEB34 /* UIApplication+ViewController.swift */,
+				CAB5B140230E6B3E00DCEB34 /* UIAlertController+Simple.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CAC57543230EE73C00BF407E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAC575482310D2BF00BF407E /* BookItem.swift */,
+				CAC57544230EE7E400BF407E /* VolumeInfo.swift */,
+				CA44881F2316C8A80029F5DB /* UserManager.swift */,
+				CAD6B8E723289C7D00988F82 /* RequestManager.swift */,
+				CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAC575502312BF3F00BF407E /* CaptureBarCode */ = {
+			isa = PBXGroup;
+			children = (
+				CAC575512312C02200BF407E /* CaptureViewController.swift */,
+				CAC575532312C09A00BF407E /* Capture.storyboard */,
+				CAC575552312C0CC00BF407E /* ResultViewController.swift */,
+				CAC575572312C0D600BF407E /* Result.storyboard */,
+			);
+			path = CaptureBarCode;
+			sourceTree = "<group>";
+		};
+		CAC575592316BEE800BF407E /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */,
+				CA4488152316BF360029F5DB /* MyPage.storyboard */,
+				CA44881B2316C1260029F5DB /* AccountViewController.swift */,
+				CA4488192316C11A0029F5DB /* Account.storyboard */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		CAD6B8E923289D1100988F82 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				CAD6B8EA23289D1C00988F82 /* Api.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		CAD6B8EE23325F6800988F82 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +239,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAB5B132230E2EE500DCEB34 /* Build configuration list for PBXNativeTarget "ShareBooks" */;
 			buildPhases = (
+				9824605AC4C6BAB5F8DDBA4D /* [CP] Check Pods Manifest.lock */,
 				CAB5B11C230E2EE300DCEB34 /* Sources */,
 				CAB5B11D230E2EE300DCEB34 /* Frameworks */,
 				CAB5B11E230E2EE300DCEB34 /* Resources */,
+				6855D97FBE3347834ABC7215 /* [CP] Embed Pods Frameworks */,
+				96E19017E7926211B1FB3280 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +267,11 @@
 				TargetAttributes = {
 					CAB5B11F230E2EE300DCEB34 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,21 +298,142 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB5B145230E8C3D00DCEB34 /* Tabbar.storyboard in Resources */,
 				CAB5B12E230E2EE500DCEB34 /* LaunchScreen.storyboard in Resources */,
+				CAC5754F23125FB400BF407E /* DetailBook.storyboard in Resources */,
+				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
+				CAB5B13F230E691100DCEB34 /* MailLogin.storyboard in Resources */,
+				CAC575582312C0D600BF407E /* Result.storyboard in Resources */,
+				CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */,
+				CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */,
 				CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */,
 				CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */,
+				CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */,
+				CAC575542312C09A00BF407E /* Capture.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6855D97FBE3347834ABC7215 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96E19017E7926211B1FB3280 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseEmailAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseEmailAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9824605AC4C6BAB5F8DDBA4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareBooks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAB5B11C230E2EE300DCEB34 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB5B126230E2EE300DCEB34 /* ViewController.swift in Sources */,
+				CAD6B8EB23289D1C00988F82 /* Api.swift in Sources */,
+				CAD6B8E823289C7D00988F82 /* RequestManager.swift in Sources */,
+				CAC575562312C0CC00BF407E /* ResultViewController.swift in Sources */,
+				CAB5B141230E6B3E00DCEB34 /* UIAlertController+Simple.swift in Sources */,
+				CAC575522312C02200BF407E /* CaptureViewController.swift in Sources */,
+				CAC5754C231252CE00BF407E /* DetailBookViewController.swift in Sources */,
+				CA4488202316C8A80029F5DB /* UserManager.swift in Sources */,
+				CAB5B14A230E8EE500DCEB34 /* SearchBooksViewController.swift in Sources */,
+				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
+				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,
+				CAB5B13D230E690300DCEB34 /* MailLoginViewController.swift in Sources */,
+				CAB5B143230E8C2100DCEB34 /* UIApplication+ViewController.swift in Sources */,
+				CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */,
+				CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */,
+				CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */,
+				CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */,
+				CAC575492310D2BF00BF407E /* BookItem.swift in Sources */,
 				CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */,
+				CAC57545230EE7E400BF407E /* VolumeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +577,10 @@
 		};
 		CAB5B133230E2EE500DCEB34 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F368772EA0BC02ED7D05773 /* Pods-ShareBooks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShareBooks/ShareBooks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B346P935N;
 				INFOPLIST_FILE = ShareBooks/Info.plist;
@@ -289,7 +588,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.yyux.ShareBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yyux.ShareBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,8 +597,10 @@
 		};
 		CAB5B134230E2EE500DCEB34 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 608916E1DD672BC26D6BECA2 /* Pods-ShareBooks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ShareBooks/ShareBooks.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B346P935N;
 				INFOPLIST_FILE = ShareBooks/Info.plist;
@@ -307,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.yyux.ShareBooks;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.yyux.ShareBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

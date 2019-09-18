@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ids-h3-hKe">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--検索-->
+        <scene sceneID="Y9I-h7-Ywq">
+            <objects>
+                <viewController storyboardIdentifier="SearchBooksViewController" id="koT-Pd-wQz" customClass="SearchBooksViewController" customModule="ShareBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2e0-Us-ju7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wys-ie-Hpc">
+                                <rect key="frame" x="20" y="104" width="327" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsB-nT-SQt">
+                                <rect key="frame" x="363" y="104" width="31" height="30"/>
+                                <state key="normal" title="検索"/>
+                                <connections>
+                                    <action selector="search:" destination="koT-Pd-wQz" eventType="touchUpInside" id="VNY-63-Cts"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-7b-Hbd">
+                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="27o-c3-dfI">
+                                    <size key="itemSize" width="156" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchBookCollectionViewCell" id="wLa-rK-YL4" customClass="SearchBookCollectionViewCell" customModule="ShareBooks" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="156" height="250"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="156" height="250"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6nl-MO-Koe">
+                                                    <rect key="frame" x="8" y="8" width="140" height="198.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="6nl-MO-Koe" secondAttribute="height" multiplier="148:210" id="pDp-gH-2YP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVc-Qw-daH">
+                                                    <rect key="frame" x="16" y="214.5" width="124" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="6nl-MO-Koe" firstAttribute="top" secondItem="wLa-rK-YL4" secondAttribute="top" constant="8" id="Bid-mk-VK8"/>
+                                            <constraint firstItem="6nl-MO-Koe" firstAttribute="centerX" secondItem="wLa-rK-YL4" secondAttribute="centerX" id="CQP-47-3WF"/>
+                                            <constraint firstItem="WVc-Qw-daH" firstAttribute="centerX" secondItem="6nl-MO-Koe" secondAttribute="centerX" id="NUM-r2-2KI"/>
+                                            <constraint firstItem="WVc-Qw-daH" firstAttribute="leading" secondItem="wLa-rK-YL4" secondAttribute="leading" constant="16" id="Rg0-T4-FJu"/>
+                                            <constraint firstItem="6nl-MO-Koe" firstAttribute="leading" secondItem="wLa-rK-YL4" secondAttribute="leading" constant="8" id="ZPj-Dx-MXn"/>
+                                            <constraint firstAttribute="bottom" secondItem="WVc-Qw-daH" secondAttribute="bottom" constant="8" id="fIN-JZ-j6u"/>
+                                            <constraint firstItem="WVc-Qw-daH" firstAttribute="top" secondItem="6nl-MO-Koe" secondAttribute="bottom" constant="8" id="k4q-Jr-hfe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="6nl-MO-Koe" id="zSh-Ct-u3y"/>
+                                            <outlet property="titleLabel" destination="WVc-Qw-daH" id="0lK-EH-AvL"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dQV-7b-Hbd" firstAttribute="leading" secondItem="XJQ-SV-lWp" secondAttribute="leading" id="Fue-1j-wpg"/>
+                            <constraint firstItem="wys-ie-Hpc" firstAttribute="leading" secondItem="XJQ-SV-lWp" secondAttribute="leading" constant="20" id="M31-nb-kNb"/>
+                            <constraint firstItem="wys-ie-Hpc" firstAttribute="top" secondItem="XJQ-SV-lWp" secondAttribute="top" constant="16" id="QS1-8F-Nwl"/>
+                            <constraint firstItem="EsB-nT-SQt" firstAttribute="leading" secondItem="wys-ie-Hpc" secondAttribute="trailing" constant="16" id="SD9-sM-jvh"/>
+                            <constraint firstItem="dQV-7b-Hbd" firstAttribute="top" secondItem="wys-ie-Hpc" secondAttribute="bottom" constant="17" id="Vgz-S8-zCf"/>
+                            <constraint firstItem="XJQ-SV-lWp" firstAttribute="trailing" secondItem="dQV-7b-Hbd" secondAttribute="trailing" id="XsQ-6z-wN5"/>
+                            <constraint firstItem="XJQ-SV-lWp" firstAttribute="bottom" secondItem="dQV-7b-Hbd" secondAttribute="bottom" id="ob8-wh-jhm"/>
+                            <constraint firstItem="XJQ-SV-lWp" firstAttribute="trailing" secondItem="EsB-nT-SQt" secondAttribute="trailing" constant="20" id="pGZ-ma-PqK"/>
+                            <constraint firstItem="EsB-nT-SQt" firstAttribute="top" secondItem="XJQ-SV-lWp" secondAttribute="top" constant="16" id="usd-fb-Ak3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XJQ-SV-lWp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="検索" image="SearchIcon" selectedImage="SearchIcon" id="8lF-j0-Cat"/>
+                    <navigationItem key="navigationItem" id="cAt-f8-NRa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dQV-7b-Hbd" id="MYw-td-ff2"/>
+                        <outlet property="searchWordTextField" destination="wys-ie-Hpc" id="9yU-6f-Swh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESv-tk-mUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1382.608695652174" y="-185.49107142857142"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="AOB-e1-cv4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ids-h3-hKe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LzC-EN-C1h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YOD-7G-cO6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="koT-Pd-wQz" kind="relationship" relationship="rootViewController" id="p1o-2m-xMp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TqH-iP-crU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="-185.49107142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SearchIcon" width="30" height="30"/>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mail Login View Controller-->
+        <scene sceneID="aii-vJ-Ecw">
+            <objects>
+                <viewController storyboardIdentifier="MailLoginViewController" id="mbR-Pm-7dF" customClass="MailLoginViewController" customModule="ShareBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ino-0G-jJu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iyg-kW-kRo">
+                                <rect key="frame" x="32" y="238" width="350" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35P-HK-3Ne">
+                                <rect key="frame" x="146" y="188" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJr-BB-p6b">
+                                <rect key="frame" x="191.5" y="292" width="31" height="30"/>
+                                <state key="normal" title="送信"/>
+                                <connections>
+                                    <action selector="mailLogin:" destination="mbR-Pm-7dF" eventType="touchUpInside" id="Zly-v5-zkK"/>
+                                    <action selector="mailLogin:" destination="8Cc-Ed-O2t" eventType="touchUpInside" id="u2M-us-SDY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aJr-BB-p6b" firstAttribute="top" secondItem="Iyg-kW-kRo" secondAttribute="bottom" constant="24" id="88d-UX-rlP"/>
+                            <constraint firstItem="aJr-BB-p6b" firstAttribute="centerX" secondItem="08c-HY-KOX" secondAttribute="centerX" id="Lfe-n3-8b1"/>
+                            <constraint firstItem="Iyg-kW-kRo" firstAttribute="centerX" secondItem="08c-HY-KOX" secondAttribute="centerX" id="T1a-pz-vCb"/>
+                            <constraint firstItem="Iyg-kW-kRo" firstAttribute="top" secondItem="35P-HK-3Ne" secondAttribute="bottom" constant="29" id="cD9-CU-fHB"/>
+                            <constraint firstItem="Iyg-kW-kRo" firstAttribute="leading" secondItem="08c-HY-KOX" secondAttribute="leading" constant="32" id="pM8-Kg-8ZG"/>
+                            <constraint firstItem="35P-HK-3Ne" firstAttribute="centerX" secondItem="Iyg-kW-kRo" secondAttribute="centerX" id="qKF-lR-pyE"/>
+                            <constraint firstItem="Iyg-kW-kRo" firstAttribute="centerY" secondItem="08c-HY-KOX" secondAttribute="centerY" constant="-200" id="zx7-hH-AHm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="08c-HY-KOX"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Iyg-kW-kRo" id="q4g-Sb-bm3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t4r-rU-w6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8Cc-Ed-O2t" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="234"/>
+        </scene>
+    </scenes>
+</document>

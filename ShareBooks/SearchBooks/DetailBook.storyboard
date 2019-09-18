@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Book View Controller-->
+        <scene sceneID="MXF-Ug-ab1">
+            <objects>
+                <viewController storyboardIdentifier="DetailBookViewController" id="Tw6-yE-gBq" customClass="DetailBookViewController" customModule="ShareBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uQN-6n-90H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DZq-f8-9j9">
+                                <rect key="frame" x="100" y="102" width="214" height="303.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="DZq-f8-9j9" secondAttribute="height" multiplier="148:210" id="Zd5-Mq-wgd"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p73-h0-TJ6">
+                                <rect key="frame" x="32" y="452" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p73-h0-TJ6" firstAttribute="leading" secondItem="jbZ-dQ-ywM" secondAttribute="leading" constant="32" id="5Dz-kB-QDJ"/>
+                            <constraint firstItem="p73-h0-TJ6" firstAttribute="top" secondItem="DZq-f8-9j9" secondAttribute="bottom" constant="46.5" id="8uU-QL-DX4"/>
+                            <constraint firstItem="p73-h0-TJ6" firstAttribute="centerX" secondItem="jbZ-dQ-ywM" secondAttribute="centerX" id="a0X-xG-2SS"/>
+                            <constraint firstItem="DZq-f8-9j9" firstAttribute="centerX" secondItem="jbZ-dQ-ywM" secondAttribute="centerX" id="b2c-OD-8DE"/>
+                            <constraint firstItem="DZq-f8-9j9" firstAttribute="top" secondItem="jbZ-dQ-ywM" secondAttribute="top" constant="58" id="i9M-84-dqg"/>
+                            <constraint firstItem="DZq-f8-9j9" firstAttribute="leading" secondItem="jbZ-dQ-ywM" secondAttribute="leading" constant="100" id="rms-YI-fLd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jbZ-dQ-ywM"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="DZq-f8-9j9" id="rgo-WT-z5S"/>
+                        <outlet property="titleLabel" destination="p73-h0-TJ6" id="BGG-ws-dTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mW-Dl-H7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="243" y="132"/>
+        </scene>
+    </scenes>
+</document>
