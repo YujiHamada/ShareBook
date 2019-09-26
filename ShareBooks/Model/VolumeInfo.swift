@@ -20,9 +20,6 @@ struct VolumeInfo: Codable {
     var previewLink: String?
     var infoLink: String?
     var canonicalVolumeLink: String?
-    
-    
-    
 }
 
 struct ImageLinks: Codable {

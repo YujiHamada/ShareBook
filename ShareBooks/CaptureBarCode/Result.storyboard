@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,28 +22,38 @@
                                     <constraint firstAttribute="width" secondItem="FaA-2h-Dll" secondAttribute="height" multiplier="148:210" id="5Px-X9-7sh"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRW-PS-zgh">
-                                <rect key="frame" x="80" y="625" width="254" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRW-PS-zgh">
+                                <rect key="frame" x="80" y="625" width="254" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2w-l5-sEE">
-                                <rect key="frame" x="32" y="661.5" width="350" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2w-l5-sEE">
+                                <rect key="frame" x="32" y="641" width="350" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syp-dE-AF1">
+                                <rect key="frame" x="191.5" y="689" width="31" height="73"/>
+                                <state key="normal" title="登録"/>
+                                <connections>
+                                    <action selector="register:" destination="h1D-h5-G7a" eventType="touchUpInside" id="Pfk-Ll-hVZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="i2w-l5-sEE" firstAttribute="centerX" secondItem="5d6-85-oU8" secondAttribute="centerX" id="3he-lA-yiW"/>
                             <constraint firstItem="JRW-PS-zgh" firstAttribute="centerX" secondItem="5d6-85-oU8" secondAttribute="centerX" id="6Ym-Vl-eLc"/>
+                            <constraint firstItem="Syp-dE-AF1" firstAttribute="centerX" secondItem="5d6-85-oU8" secondAttribute="centerX" id="ADH-aI-LUT"/>
                             <constraint firstItem="JRW-PS-zgh" firstAttribute="top" secondItem="FaA-2h-Dll" secondAttribute="bottom" constant="32" id="TQ5-4Q-Vtv"/>
                             <constraint firstItem="FaA-2h-Dll" firstAttribute="centerX" secondItem="5d6-85-oU8" secondAttribute="centerX" id="U7T-Ip-Sct"/>
-                            <constraint firstItem="FaA-2h-Dll" firstAttribute="centerY" secondItem="5d6-85-oU8" secondAttribute="centerY" constant="-40" id="UVE-WL-ov7"/>
+                            <constraint firstItem="FaA-2h-Dll" firstAttribute="centerY" relation="lessThanOrEqual" secondItem="5d6-85-oU8" secondAttribute="centerY" constant="-40" id="UVE-WL-ov7"/>
                             <constraint firstItem="JRW-PS-zgh" firstAttribute="leading" secondItem="FaA-2h-Dll" secondAttribute="leading" id="a8v-xA-V1m"/>
                             <constraint firstItem="i2w-l5-sEE" firstAttribute="leading" secondItem="5d6-85-oU8" secondAttribute="leading" constant="32" id="bGT-aO-Liz"/>
+                            <constraint firstItem="Syp-dE-AF1" firstAttribute="top" secondItem="i2w-l5-sEE" secondAttribute="bottom" constant="48" id="eri-G8-cFM"/>
+                            <constraint firstItem="5d6-85-oU8" firstAttribute="bottom" secondItem="Syp-dE-AF1" secondAttribute="bottom" constant="100" id="hed-As-uik"/>
                             <constraint firstItem="FaA-2h-Dll" firstAttribute="leading" secondItem="5d6-85-oU8" secondAttribute="leading" constant="80" id="nfg-hs-GFW"/>
                             <constraint firstItem="i2w-l5-sEE" firstAttribute="top" secondItem="JRW-PS-zgh" secondAttribute="bottom" constant="16" id="p6X-hc-uT5"/>
                         </constraints>

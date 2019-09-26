@@ -14,7 +14,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     var code: String!
-    
+    var bookItem: BookItem?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,11 +32,28 @@ class ResultViewController: UIViewController {
                 let decoder: JSONDecoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(formatter)
                 let bookItems = try! decoder.decode(Array<BookItem>.self, from: data!)
-                let bookItem = bookItems[0]
-                self.imageView.af_setImage(withURL: URL(string: bookItem.imageUrl())!)
-                self.titleLabel.text = bookItem.volumeInfo?.title
-                self.descriptionLabel.text = bookItem.volumeInfo?.description
+                self.bookItem = bookItems[0]
+                self.imageView.af_setImage(withURL: URL(string: self.bookItem!.imageUrl())!)
+                self.titleLabel.text = self.bookItem?.volumeInfo?.title
+                self.descriptionLabel.text = self.bookItem?.volumeInfo?.description
             }
+        }
+    }
+    
+    @IBAction func register(_ sender: Any) {
+        let parameters: [String : Any] = [
+            "name": bookItem!.volumeInfo!.title!,
+            "isbn": bookItem!.id!,
+            "description" : bookItem!.volumeInfo!.description!,
+            "link" : bookItem!.volumeInfo!.imageLinks!.smallThumbnail!
+        ]
+        RequestManager.shared.request(api: Api.registerBook, parameters: parameters) { (result) in
+            let alert = UIAlertController(title: "", message: "本の登録が完了しました", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+                self.navigationController?.popViewController(animated: true)
+            })
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
         }
     }
 }

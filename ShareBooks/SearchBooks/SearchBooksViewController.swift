@@ -40,6 +40,15 @@ class SearchBooksViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
         navigationItem.title = "マイページ"
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ変更", style: .plain, target: self, action: #selector(changeGroup))
+
+    }
+    
+    @objc func changeGroup() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
+        appDelegate.window?.rootViewController = navigationController
     }
 
     @IBAction func search(_ sender: Any) {
@@ -64,13 +73,15 @@ class SearchBooksViewController: UIViewController {
             "startIndex" : index,
             "maxResults" : offset
         ]
+        
         Alamofire.request(url, method: .get, parameters: parameters).responseJSON { response in
             self.isReloading = false
-            self.index = self.index + self.offset
             if let dict = response.result.value as? [String : Any] {
-                guard let items: [[String : Any]] = dict["items"] as? [[String : Any]]   else {
-                    let okAlert = UIAlertController.simpleOkAlert(title: "該当なし", message: "検索結果が0件でした")
-                    self.present(okAlert, animated: true)
+                guard let items: [[String : Any]] = dict["items"] as? [[String : Any]]  else {
+                    if self.index == 0 {
+                        let okAlert = UIAlertController.simpleOkAlert(title: "該当なし", message: "検索結果が0件でした")
+                        self.present(okAlert, animated: true)
+                    }
                     return
                 }
                 
@@ -82,6 +93,7 @@ class SearchBooksViewController: UIViewController {
                 let decoder: JSONDecoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(formatter)
                 let newBookItems = try! decoder.decode(Array<BookItem>.self, from: data!)
+                self.index = self.index + newBookItems.count
                 if self.bookItems == nil {
                     self.bookItems = newBookItems
                 } else {
@@ -134,6 +146,4 @@ extension SearchBooksViewController: UICollectionViewDelegate, UICollectionViewD
         let widthPerItem = availableWidth / itemsPerRow
         return CGSize(width: widthPerItem, height: widthPerItem / 148 * 210 + 50)
     }
-
-
 }

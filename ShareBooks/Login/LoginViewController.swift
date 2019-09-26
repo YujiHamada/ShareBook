@@ -69,8 +69,9 @@ extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate {
                 ]
                 RequestManager.shared.request(api: Api.signupin, parameters: parameters, completion: { (result) in
                     
-                        print(result)
-//                    self.present(TabBarController.createWithStoryboard(), animated: true)
+                    let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
+                    navigationController.modalPresentationStyle = .fullScreen
+                    self.present(navigationController, animated: true)
                 })
                 
             }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Group View Controller-->
+        <scene sceneID="diH-8C-xnE">
+            <objects>
+                <viewController storyboardIdentifier="CreateGroupViewController" id="2OO-51-2oM" customClass="CreateGroupViewController" customModule="ShareBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aSi-My-C32">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O6E-dU-5z7">
+                                <rect key="frame" x="170" y="139.5" width="212" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="グループ名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhD-1b-fEd">
+                                <rect key="frame" x="32" y="144" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-or-G0X">
+                                <rect key="frame" x="170" y="211.5" width="212" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="招待コード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL6-i5-wdF">
+                                <rect key="frame" x="32" y="216" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-3h-gA0">
+                                <rect key="frame" x="191.5" y="301" width="31" height="30"/>
+                                <state key="normal" title="作成"/>
+                                <connections>
+                                    <action selector="createGroup:" destination="2OO-51-2oM" eventType="touchUpInside" id="FyW-XW-ggD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O6E-dU-5z7" firstAttribute="centerY" secondItem="MhD-1b-fEd" secondAttribute="centerY" id="04n-JP-cPb"/>
+                            <constraint firstItem="O6E-dU-5z7" firstAttribute="leading" secondItem="MhD-1b-fEd" secondAttribute="trailing" constant="51" id="4Dt-O0-x2q"/>
+                            <constraint firstItem="lMk-ZR-bbK" firstAttribute="trailing" secondItem="O6E-dU-5z7" secondAttribute="trailing" constant="32" id="7z3-ar-Q9N"/>
+                            <constraint firstItem="MhD-1b-fEd" firstAttribute="top" secondItem="lMk-ZR-bbK" secondAttribute="top" constant="100" id="BmR-sL-Daj"/>
+                            <constraint firstItem="JNh-3h-gA0" firstAttribute="centerX" secondItem="lMk-ZR-bbK" secondAttribute="centerX" id="DCn-sS-cwB"/>
+                            <constraint firstItem="JNh-3h-gA0" firstAttribute="top" secondItem="pL6-i5-wdF" secondAttribute="bottom" constant="64" id="PGK-70-oaB"/>
+                            <constraint firstItem="MhD-1b-fEd" firstAttribute="leading" secondItem="lMk-ZR-bbK" secondAttribute="leading" constant="32" id="WHy-VT-VPc"/>
+                            <constraint firstItem="pL6-i5-wdF" firstAttribute="leading" secondItem="MhD-1b-fEd" secondAttribute="leading" id="a0c-9C-87Y"/>
+                            <constraint firstItem="XLj-or-G0X" firstAttribute="trailing" secondItem="O6E-dU-5z7" secondAttribute="trailing" id="cBA-EN-abu"/>
+                            <constraint firstItem="XLj-or-G0X" firstAttribute="leading" secondItem="O6E-dU-5z7" secondAttribute="leading" id="ibV-iJ-PsY"/>
+                            <constraint firstItem="XLj-or-G0X" firstAttribute="centerY" secondItem="pL6-i5-wdF" secondAttribute="centerY" id="ro5-qJ-5K6"/>
+                            <constraint firstItem="pL6-i5-wdF" firstAttribute="top" secondItem="MhD-1b-fEd" secondAttribute="bottom" constant="51" id="wO4-Eo-G2U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lMk-ZR-bbK"/>
+                    </view>
+                    <connections>
+                        <outlet property="groupTextField" destination="O6E-dU-5z7" id="H25-xn-WMf"/>
+                        <outlet property="inviteCodeTextField" destination="XLj-or-G0X" id="LIo-8P-iSt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEM-kX-jea" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101" y="117"/>
+        </scene>
+    </scenes>
+</document>

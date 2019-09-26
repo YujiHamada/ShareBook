@@ -11,11 +11,23 @@ import Foundation
 enum Api {
     
     case signupin
+    case createGroup
+    case groupList
+    case registerBook
+    case myBookList
     
     func parameterKey() -> String {
         switch self {
         case .signupin:
             return ""
+        case .createGroup:
+            return ""
+        case .groupList:
+            return "groups"
+        case .registerBook:
+            return ""
+        case .myBookList:
+            return "books"
         }
     }
     
@@ -23,6 +35,14 @@ enum Api {
         switch self {
         case .signupin:
             return domain() + "/user/signupin"
+        case .createGroup:
+            return domain() + "/group/create"
+        case .groupList:
+            return domain() + "/user/groups"
+        case .registerBook:
+            return domain() + "/book/register"
+        case .myBookList:
+            return domain() + "/book/list"
         }
     }
     

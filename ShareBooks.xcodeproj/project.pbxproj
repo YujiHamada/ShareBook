@@ -35,9 +35,21 @@
 		CAC575542312C09A00BF407E /* Capture.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC575532312C09A00BF407E /* Capture.storyboard */; };
 		CAC575562312C0CC00BF407E /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC575552312C0CC00BF407E /* ResultViewController.swift */; };
 		CAC575582312C0D600BF407E /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAC575572312C0D600BF407E /* Result.storyboard */; };
+		CAD60AB3233707E2004D355F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD60AB2233707E2004D355F /* Group.swift */; };
+		CAD60AB523372DE1004D355F /* GroupHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD60AB423372DE1004D355F /* GroupHomeTableViewCell.swift */; };
+		CAD60AB823373835004D355F /* GroupTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD60AB723373835004D355F /* GroupTabViewController.swift */; };
+		CAD60ABA2337383E004D355F /* GroupTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD60AB92337383E004D355F /* GroupTab.storyboard */; };
+		CAD60ABD233904C8004D355F /* Bookshelf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD60ABC233904C8004D355F /* Bookshelf.storyboard */; };
+		CAD60ABF233904E2004D355F /* BookshelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD60ABE233904E2004D355F /* BookshelfViewController.swift */; };
+		CAD60AC12339076B004D355F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD60AC02339076B004D355F /* Book.swift */; };
+		CAD60AC323390947004D355F /* BookshelfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD60AC223390947004D355F /* BookshelfTableViewCell.swift */; };
 		CAD6B8E823289C7D00988F82 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6B8E723289C7D00988F82 /* RequestManager.swift */; };
 		CAD6B8EB23289D1C00988F82 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6B8EA23289D1C00988F82 /* Api.swift */; };
 		CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */; };
+		CAE8FD2F2332648E00613420 /* GroupHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8FD2E2332648E00613420 /* GroupHome.storyboard */; };
+		CAE8FD33233264E300613420 /* GroupHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8FD32233264E300613420 /* GroupHomeViewController.swift */; };
+		CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8FD342332655300613420 /* CreateGroupViewController.swift */; };
+		CAE8FD372332657C00613420 /* CreateGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8FD362332657C00613420 /* CreateGroup.storyboard */; };
 		DBADBCE3B67F97F75CD83CDF /* Pods_ShareBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,9 +88,21 @@
 		CAC575532312C09A00BF407E /* Capture.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Capture.storyboard; sourceTree = "<group>"; };
 		CAC575552312C0CC00BF407E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		CAC575572312C0D600BF407E /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		CAD60AB2233707E2004D355F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		CAD60AB423372DE1004D355F /* GroupHomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHomeTableViewCell.swift; sourceTree = "<group>"; };
+		CAD60AB723373835004D355F /* GroupTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTabViewController.swift; sourceTree = "<group>"; };
+		CAD60AB92337383E004D355F /* GroupTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupTab.storyboard; sourceTree = "<group>"; };
+		CAD60ABC233904C8004D355F /* Bookshelf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookshelf.storyboard; sourceTree = "<group>"; };
+		CAD60ABE233904E2004D355F /* BookshelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfViewController.swift; sourceTree = "<group>"; };
+		CAD60AC02339076B004D355F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		CAD60AC223390947004D355F /* BookshelfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfTableViewCell.swift; sourceTree = "<group>"; };
 		CAD6B8E723289C7D00988F82 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		CAD6B8EA23289D1C00988F82 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseStatus.swift; sourceTree = "<group>"; };
+		CAE8FD2E2332648E00613420 /* GroupHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupHome.storyboard; sourceTree = "<group>"; };
+		CAE8FD32233264E300613420 /* GroupHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHomeViewController.swift; sourceTree = "<group>"; };
+		CAE8FD342332655300613420 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		CAE8FD362332657C00613420 /* CreateGroup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateGroup.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,14 +166,15 @@
 		CAB5B122230E2EE300DCEB34 /* ShareBooks */ = {
 			isa = PBXGroup;
 			children = (
-				CAD6B8EE23325F6800988F82 /* New Group */,
+				CAB5B146230E8C9400DCEB34 /* SearchBooks */,
+				CAD60ABB23390468004D355F /* Bookshelf */,
+				CAD6B8EE23325F6800988F82 /* Group */,
 				CAD6B8E923289D1100988F82 /* Enum */,
 				CA448821231A45890029F5DB /* Login */,
 				CAC575592316BEE800BF407E /* MyPage */,
 				CAC575502312BF3F00BF407E /* CaptureBarCode */,
 				CAC57543230EE73C00BF407E /* Model */,
 				CAB5B147230E8CA700DCEB34 /* Extensions */,
-				CAB5B146230E8C9400DCEB34 /* SearchBooks */,
 				CAB5B13B230E311E00DCEB34 /* ShareBooks.entitlements */,
 				CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */,
 				CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */,
@@ -191,6 +216,8 @@
 				CA44881F2316C8A80029F5DB /* UserManager.swift */,
 				CAD6B8E723289C7D00988F82 /* RequestManager.swift */,
 				CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */,
+				CAD60AB2233707E2004D355F /* Group.swift */,
+				CAD60AC02339076B004D355F /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +244,16 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		CAD60ABB23390468004D355F /* Bookshelf */ = {
+			isa = PBXGroup;
+			children = (
+				CAD60ABC233904C8004D355F /* Bookshelf.storyboard */,
+				CAD60ABE233904E2004D355F /* BookshelfViewController.swift */,
+				CAD60AC223390947004D355F /* BookshelfTableViewCell.swift */,
+			);
+			path = Bookshelf;
+			sourceTree = "<group>";
+		};
 		CAD6B8E923289D1100988F82 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,11 +262,18 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
-		CAD6B8EE23325F6800988F82 /* New Group */ = {
+		CAD6B8EE23325F6800988F82 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				CAE8FD2E2332648E00613420 /* GroupHome.storyboard */,
+				CAE8FD32233264E300613420 /* GroupHomeViewController.swift */,
+				CAE8FD342332655300613420 /* CreateGroupViewController.swift */,
+				CAE8FD362332657C00613420 /* CreateGroup.storyboard */,
+				CAD60AB423372DE1004D355F /* GroupHomeTableViewCell.swift */,
+				CAD60AB723373835004D355F /* GroupTabViewController.swift */,
+				CAD60AB92337383E004D355F /* GroupTab.storyboard */,
 			);
-			path = "New Group";
+			path = Group;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,9 +344,13 @@
 			files = (
 				CAB5B145230E8C3D00DCEB34 /* Tabbar.storyboard in Resources */,
 				CAB5B12E230E2EE500DCEB34 /* LaunchScreen.storyboard in Resources */,
+				CAD60ABA2337383E004D355F /* GroupTab.storyboard in Resources */,
 				CAC5754F23125FB400BF407E /* DetailBook.storyboard in Resources */,
 				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
+				CAE8FD372332657C00613420 /* CreateGroup.storyboard in Resources */,
+				CAE8FD2F2332648E00613420 /* GroupHome.storyboard in Resources */,
 				CAB5B13F230E691100DCEB34 /* MailLogin.storyboard in Resources */,
+				CAD60ABD233904C8004D355F /* Bookshelf.storyboard in Resources */,
 				CAC575582312C0D600BF407E /* Result.storyboard in Resources */,
 				CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */,
 				CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */,
@@ -423,16 +471,24 @@
 				CAC5754C231252CE00BF407E /* DetailBookViewController.swift in Sources */,
 				CA4488202316C8A80029F5DB /* UserManager.swift in Sources */,
 				CAB5B14A230E8EE500DCEB34 /* SearchBooksViewController.swift in Sources */,
+				CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */,
 				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
 				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,
+				CAD60AC323390947004D355F /* BookshelfTableViewCell.swift in Sources */,
+				CAD60ABF233904E2004D355F /* BookshelfViewController.swift in Sources */,
+				CAD60AB3233707E2004D355F /* Group.swift in Sources */,
 				CAB5B13D230E690300DCEB34 /* MailLoginViewController.swift in Sources */,
 				CAB5B143230E8C2100DCEB34 /* UIApplication+ViewController.swift in Sources */,
+				CAD60AB523372DE1004D355F /* GroupHomeTableViewCell.swift in Sources */,
 				CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */,
 				CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */,
 				CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */,
+				CAD60AB823373835004D355F /* GroupTabViewController.swift in Sources */,
 				CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */,
 				CAC575492310D2BF00BF407E /* BookItem.swift in Sources */,
+				CAE8FD33233264E300613420 /* GroupHomeViewController.swift in Sources */,
 				CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */,
+				CAD60AC12339076B004D355F /* Book.swift in Sources */,
 				CAC57545230EE7E400BF407E /* VolumeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

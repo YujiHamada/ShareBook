@@ -22,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
-            let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-            window?.rootViewController = tabBarController
+            let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
+            window?.rootViewController = navigationController
         }
         
         return true

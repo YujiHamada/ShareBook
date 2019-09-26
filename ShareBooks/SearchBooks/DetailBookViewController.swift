@@ -28,15 +28,22 @@ class DetailBookViewController: UIViewController {
         titleLabel.text = bookItem.volumeInfo?.title
     }
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func register(_ sender: Any) {
+        
+        let parameters: [String : Any] = [
+            "name": bookItem.volumeInfo!.title!,
+            "isbn": bookItem.id!,
+            "description" : bookItem.volumeInfo!.description!,
+            "link" : bookItem.volumeInfo!.imageLinks!.smallThumbnail!
+        ]
+        RequestManager.shared.request(api: Api.registerBook, parameters: parameters) { (result) in
+            let alert = UIAlertController(title: "", message: "本の登録が完了しました", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+                self.navigationController?.popViewController(animated: true)
+            })
+            alert.addAction(okAction)
+            self.present(alert, animated: true)
+        }
     }
-    */
-
+    
 }

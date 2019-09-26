@@ -17,7 +17,7 @@ struct RequestManager {
     static let shared = RequestManager()
     private init() {}
     
-    func request<T:Codable>(api: Api, parameters: Parameters? = nil, completion: @escaping (Result<T>) -> Void) {
+    func request<T:Codable>(api: Api, parameters: Parameters? = nil, completion: @escaping (Swift.Result<T, Error>) -> Void) {
         let currentUser = Auth.auth().currentUser
         if let currentUser = currentUser {
             currentUser.getIDTokenForcingRefresh(true) { idToken, error in
@@ -35,7 +35,7 @@ struct RequestManager {
         }
     }
     
-    private func request<T:Codable>(api: Api, parameters: Parameters? = nil, headers: HTTPHeaders?, completion: @escaping (Result<T>) -> Void) {
+    private func request<T:Codable>(api: Api, parameters: Parameters? = nil, headers: HTTPHeaders?, completion: @escaping (Swift.Result<T, Error>) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(api.url(), method: .get, parameters: parameters, headers: headers).responseJSON { response in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -63,7 +63,7 @@ struct RequestManager {
         }
     }
     
-    func request(api: Api, parameters: Parameters? = nil, completion: @escaping (Result<Dictionary<String, Any>>) -> Void) {
+    func request(api: Api, parameters: Parameters? = nil, completion: @escaping (Swift.Result<Dictionary<String, Any>, Error>) -> Void) {
         let currentUser = Auth.auth().currentUser
         if let currentUser = currentUser {
             currentUser.getIDTokenForcingRefresh(true) { idToken, error in
@@ -81,7 +81,7 @@ struct RequestManager {
         }
     }
     
-    private func requestDictionary(api: Api, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Result<Dictionary<String, Any>>) -> Void) {
+    private func requestDictionary(api: Api, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Swift.Result<Dictionary<String, Any>, Error>) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(api.url(), method: .get, parameters: parameters, headers: headers).responseJSON { response in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -101,7 +101,7 @@ struct RequestManager {
         }
     }
     
-    func requestStatus(api: Api, parameters: Parameters? = nil, completion: @escaping (Result<Bool>) -> Void) {
+    func requestStatus(api: Api, parameters: Parameters? = nil, completion: @escaping (Swift.Result<Bool, Error>) -> Void) {
         let currentUser = Auth.auth().currentUser
         if let currentUser = currentUser {
             currentUser.getIDTokenForcingRefresh(true) { idToken, error in
@@ -119,7 +119,7 @@ struct RequestManager {
         }
     }
     
-    private func requestStatus(api: Api, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Result<Bool>) -> Void) {
+    private func requestStatus(api: Api, parameters: Parameters? = nil, headers: HTTPHeaders? = nil, completion: @escaping (Swift.Result<Bool, Error>) -> Void) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         Alamofire.request(api.url(), method: .get, parameters: parameters, headers: headers).responseJSON { response in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
