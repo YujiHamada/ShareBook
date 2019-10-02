@@ -58,8 +58,7 @@ class SearchBooksViewController: UIViewController {
     
     @objc func changeGroup() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
-        appDelegate.window?.rootViewController = navigationController
+        appDelegate.window?.rootViewController = GroupTabViewController.createWithStoryboard()
     }
     
     private func requestBook() {

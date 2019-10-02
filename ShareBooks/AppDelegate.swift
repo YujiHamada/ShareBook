@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         if Auth.auth().currentUser != nil {
-            let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
-            window?.rootViewController = navigationController
+            window?.rootViewController = GroupTabViewController.createWithStoryboard()
         }
         
         return true
