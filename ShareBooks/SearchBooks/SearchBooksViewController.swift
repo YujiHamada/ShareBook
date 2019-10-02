@@ -11,12 +11,12 @@ import Alamofire
 
 class SearchBooksViewController: UIViewController {
 
-    @IBOutlet weak var searchWordTextField: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    var searchBar: UISearchBar!
     
     var index = 0
     var offset = 10
-    var searchWord: String!
+    var searchWord: String?
     var isReloading = false
     var bookItems: [BookItem]? {
         didSet {
@@ -42,7 +42,18 @@ class SearchBooksViewController: UIViewController {
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ変更", style: .plain, target: self, action: #selector(changeGroup))
-
+        
+        if let navigationBarFrame = navigationController?.navigationBar.bounds {
+            let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
+            searchBar.delegate = self
+            searchBar.placeholder = "タイトルで探す"
+            searchBar.tintColor = UIColor.gray
+            searchBar.keyboardType = UIKeyboardType.default
+            navigationItem.titleView = searchBar
+            navigationItem.titleView?.frame = searchBar.frame
+            self.searchBar = searchBar
+        }
+        
     }
     
     @objc func changeGroup() {
@@ -50,22 +61,16 @@ class SearchBooksViewController: UIViewController {
         let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
         appDelegate.window?.rootViewController = navigationController
     }
-
-    @IBAction func search(_ sender: Any) {
-        searchWordTextField.endEditing(true)
-        guard let word = searchWordTextField.text else { return }
-        self.collectionView.contentOffset = CGPoint(x: 0, y: -self.collectionView.contentInset.top);
-        searchWord = word
-        index = 0
-        offset = 10
-        bookItems = nil
-        requestBook()
-    }
     
     private func requestBook() {
         if isReloading {
             return
         }
+        
+        guard let searchWord = searchWord else {
+            return
+        }
+        
         isReloading = true
         let url = "https://www.googleapis.com/books/v1/volumes"
         let parameters: Parameters = [
@@ -107,8 +112,6 @@ class SearchBooksViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
         let offsetY = scrollView.contentOffset.y
@@ -145,5 +148,27 @@ extension SearchBooksViewController: UICollectionViewDelegate, UICollectionViewD
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / itemsPerRow
         return CGSize(width: widthPerItem, height: widthPerItem / 148 * 210 + 50)
+    }
+}
+
+extension SearchBooksViewController: UISearchBarDelegate {
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+        searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        self.collectionView.contentOffset = CGPoint(x: 0, y: -self.collectionView.contentInset.top);
+        searchWord = searchBar.text!
+        index = 0
+        offset = 10
+        bookItems = nil
+        requestBook()
     }
 }

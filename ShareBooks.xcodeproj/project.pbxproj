@@ -50,6 +50,7 @@
 		CAE8FD33233264E300613420 /* GroupHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8FD32233264E300613420 /* GroupHomeViewController.swift */; };
 		CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8FD342332655300613420 /* CreateGroupViewController.swift */; };
 		CAE8FD372332657C00613420 /* CreateGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE8FD362332657C00613420 /* CreateGroup.storyboard */; };
+		CAF2AB6123438335006772B7 /* BookshelfCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */; };
 		DBADBCE3B67F97F75CD83CDF /* Pods_ShareBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		CAE8FD32233264E300613420 /* GroupHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupHomeViewController.swift; sourceTree = "<group>"; };
 		CAE8FD342332655300613420 /* CreateGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 		CAE8FD362332657C00613420 /* CreateGroup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateGroup.storyboard; sourceTree = "<group>"; };
+		CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +252,7 @@
 				CAD60ABC233904C8004D355F /* Bookshelf.storyboard */,
 				CAD60ABE233904E2004D355F /* BookshelfViewController.swift */,
 				CAD60AC223390947004D355F /* BookshelfTableViewCell.swift */,
+				CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */,
 			);
 			path = Bookshelf;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
 				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,
 				CAD60AC323390947004D355F /* BookshelfTableViewCell.swift in Sources */,
+				CAF2AB6123438335006772B7 /* BookshelfCollectionView.swift in Sources */,
 				CAD60ABF233904E2004D355F /* BookshelfViewController.swift in Sources */,
 				CAD60AB3233707E2004D355F /* Group.swift in Sources */,
 				CAB5B13D230E690300DCEB34 /* MailLoginViewController.swift in Sources */,

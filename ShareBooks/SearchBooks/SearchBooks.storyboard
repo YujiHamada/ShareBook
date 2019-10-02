@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ids-h3-hKe">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ids-h3-hKe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,21 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wys-ie-Hpc">
-                                <rect key="frame" x="20" y="104" width="327" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsB-nT-SQt">
-                                <rect key="frame" x="363" y="104" width="31" height="30"/>
-                                <state key="normal" title="検索"/>
-                                <connections>
-                                    <action selector="search:" destination="koT-Pd-wQz" eventType="touchUpInside" id="VNY-63-Cts"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dQV-7b-Hbd">
-                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="27o-c3-dfI">
                                     <size key="itemSize" width="156" height="250"/>
@@ -82,14 +67,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dQV-7b-Hbd" firstAttribute="leading" secondItem="XJQ-SV-lWp" secondAttribute="leading" id="Fue-1j-wpg"/>
-                            <constraint firstItem="wys-ie-Hpc" firstAttribute="leading" secondItem="XJQ-SV-lWp" secondAttribute="leading" constant="20" id="M31-nb-kNb"/>
-                            <constraint firstItem="wys-ie-Hpc" firstAttribute="top" secondItem="XJQ-SV-lWp" secondAttribute="top" constant="16" id="QS1-8F-Nwl"/>
-                            <constraint firstItem="EsB-nT-SQt" firstAttribute="leading" secondItem="wys-ie-Hpc" secondAttribute="trailing" constant="16" id="SD9-sM-jvh"/>
-                            <constraint firstItem="dQV-7b-Hbd" firstAttribute="top" secondItem="wys-ie-Hpc" secondAttribute="bottom" constant="17" id="Vgz-S8-zCf"/>
+                            <constraint firstItem="dQV-7b-Hbd" firstAttribute="top" secondItem="XJQ-SV-lWp" secondAttribute="top" id="RS2-3K-05j"/>
                             <constraint firstItem="XJQ-SV-lWp" firstAttribute="trailing" secondItem="dQV-7b-Hbd" secondAttribute="trailing" id="XsQ-6z-wN5"/>
                             <constraint firstItem="XJQ-SV-lWp" firstAttribute="bottom" secondItem="dQV-7b-Hbd" secondAttribute="bottom" id="ob8-wh-jhm"/>
-                            <constraint firstItem="XJQ-SV-lWp" firstAttribute="trailing" secondItem="EsB-nT-SQt" secondAttribute="trailing" constant="20" id="pGZ-ma-PqK"/>
-                            <constraint firstItem="EsB-nT-SQt" firstAttribute="top" secondItem="XJQ-SV-lWp" secondAttribute="top" constant="16" id="usd-fb-Ak3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XJQ-SV-lWp"/>
                     </view>
@@ -98,7 +78,6 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="dQV-7b-Hbd" id="MYw-td-ff2"/>
-                        <outlet property="searchWordTextField" destination="wys-ie-Hpc" id="9yU-6f-Swh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ESv-tk-mUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
