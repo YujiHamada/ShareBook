@@ -10,6 +10,8 @@ import UIKit
 
 class TabBarController: UITabBarController {
 
+    var groupId: Int!
+    
     static func createWithStoryboard() -> TabBarController{
         let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController

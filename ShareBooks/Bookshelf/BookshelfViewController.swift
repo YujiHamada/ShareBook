@@ -18,10 +18,10 @@ class BookshelfViewController: UIViewController {
 
         collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        collectionView.identifier = "BookshelfViewController"
+        
         collectionView.delegate = collectionView
         collectionView.dataSource = collectionView
-        
+        collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
         navigationItem.title = "本棚"
         
@@ -42,7 +42,7 @@ class BookshelfViewController: UIViewController {
     }
     
     @objc func refresh() {
-//        requestBook()
+        requestBook()
     }
     
 }

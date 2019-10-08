@@ -12,6 +12,7 @@
 		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
 		CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */; };
 		CA4488202316C8A80029F5DB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881F2316C8A80029F5DB /* UserManager.swift */; };
+		CA9515AB234B652100861D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9515AA234B652100861D56 /* User.swift */; };
 		CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */; };
 		CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */; };
 		CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B127230E2EE300DCEB34 /* Main.storyboard */; };
@@ -53,8 +54,6 @@
 		CAF2AB6123438335006772B7 /* BookshelfCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */; };
 		CAF2AB632344D31B006772B7 /* GroupBookshelfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2AB622344D31B006772B7 /* GroupBookshelfViewController.swift */; };
 		CAF2AB692344D7A1006772B7 /* GroupBookshelf.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF2AB682344D7A1006772B7 /* GroupBookshelf.storyboard */; };
-		CAF2AB6B2344E38A006772B7 /* GroupBookshelfCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2AB6A2344E38A006772B7 /* GroupBookshelfCollectionView.swift */; };
-		CAF2AB6D2344E403006772B7 /* GroupBookshelfTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF2AB6C2344E403006772B7 /* GroupBookshelfTableViewCell.swift */; };
 		DBADBCE3B67F97F75CD83CDF /* Pods_ShareBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +66,7 @@
 		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		CA44881F2316C8A80029F5DB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CA9515AA234B652100861D56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAB5B120230E2EE300DCEB34 /* ShareBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -111,8 +111,6 @@
 		CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookshelfCollectionView.swift; sourceTree = "<group>"; };
 		CAF2AB622344D31B006772B7 /* GroupBookshelfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBookshelfViewController.swift; sourceTree = "<group>"; };
 		CAF2AB682344D7A1006772B7 /* GroupBookshelf.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupBookshelf.storyboard; sourceTree = "<group>"; };
-		CAF2AB6A2344E38A006772B7 /* GroupBookshelfCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBookshelfCollectionView.swift; sourceTree = "<group>"; };
-		CAF2AB6C2344E403006772B7 /* GroupBookshelfTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBookshelfTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +226,7 @@
 				CAD6B8EC23289F8E00988F82 /* ResponseStatus.swift */,
 				CAD60AB2233707E2004D355F /* Group.swift */,
 				CAD60AC02339076B004D355F /* Book.swift */,
+				CA9515AA234B652100861D56 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -263,8 +262,6 @@
 				CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */,
 				CAF2AB622344D31B006772B7 /* GroupBookshelfViewController.swift */,
 				CAF2AB682344D7A1006772B7 /* GroupBookshelf.storyboard */,
-				CAF2AB6A2344E38A006772B7 /* GroupBookshelfCollectionView.swift */,
-				CAF2AB6C2344E403006772B7 /* GroupBookshelfTableViewCell.swift */,
 			);
 			path = Bookshelf;
 			sourceTree = "<group>";
@@ -481,14 +478,13 @@
 			files = (
 				CAD6B8EB23289D1C00988F82 /* Api.swift in Sources */,
 				CAD6B8E823289C7D00988F82 /* RequestManager.swift in Sources */,
-				CAF2AB6D2344E403006772B7 /* GroupBookshelfTableViewCell.swift in Sources */,
 				CAC575562312C0CC00BF407E /* ResultViewController.swift in Sources */,
 				CAB5B141230E6B3E00DCEB34 /* UIAlertController+Simple.swift in Sources */,
-				CAF2AB6B2344E38A006772B7 /* GroupBookshelfCollectionView.swift in Sources */,
 				CAC575522312C02200BF407E /* CaptureViewController.swift in Sources */,
 				CAC5754C231252CE00BF407E /* DetailBookViewController.swift in Sources */,
 				CA4488202316C8A80029F5DB /* UserManager.swift in Sources */,
 				CAB5B14A230E8EE500DCEB34 /* SearchBooksViewController.swift in Sources */,
+				CA9515AB234B652100861D56 /* User.swift in Sources */,
 				CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */,
 				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
 				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,

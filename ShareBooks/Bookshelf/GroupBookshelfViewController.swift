@@ -10,19 +10,32 @@ import UIKit
 
 class GroupBookshelfViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: GroupBookshelfCollectionView!
+    @IBOutlet weak var collectionView: BookshelfCollectionView!
+    fileprivate let refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.identifier = "GroupBookshelfViewController"
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        
         collectionView.delegate = collectionView
         collectionView.dataSource = collectionView
-        
+        collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
-        navigationItem.title = "本棚"
+        navigationItem.title = "グループ本棚"
         
-        RequestManager.shared.request(api: Api.myBookList) { (result: Result<Array<Book>, Error>) in
+        requestBook()
+    }
+    
+    func requestBook() {
+        
+        let tabbarController: TabBarController = self.tabBarController! as! TabBarController
+        let parameter: [String: Any] = [
+            "group_id" : tabbarController.groupId!
+        ]
+        RequestManager.shared.request(api: Api.groupBookList, parameters: parameter) { (result: Result<Array<Book>, Error>) in
+            self.refreshControl.endRefreshing()
             switch result {
             case .success(let books):
                 self.collectionView.books = books
@@ -31,6 +44,10 @@ class GroupBookshelfViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    
+    @objc func refresh() {
+        requestBook()
     }
     
 }

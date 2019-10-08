@@ -10,7 +10,6 @@ import UIKit
 
 class BookshelfCollectionView: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var identifier: String!
     var books: Array<Book>? {
         didSet {
             reloadData()
@@ -27,7 +26,7 @@ class BookshelfCollectionView: UICollectionView, UICollectionViewDataSource, UIC
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell: BookshelfCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as! BookshelfCollectionViewCell
+            let cell: BookshelfCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookshelfCollectionViewCell", for: indexPath) as! BookshelfCollectionViewCell
             cell.imageView.image = nil
             cell.book = books![indexPath.row]
             return cell

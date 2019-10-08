@@ -14,6 +14,7 @@ struct Book: Codable {
     var link: String!
     var isbn: String!
     var description: String!
+    var users: [User]?
     
     func imageUrl() -> String{
         var comps = URLComponents(string: link)!

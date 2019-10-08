@@ -9,6 +9,7 @@
 import Foundation
 
 struct Group: Codable {
+    var id: Int!
     var name: String!
     var inviteCode: String!
 }

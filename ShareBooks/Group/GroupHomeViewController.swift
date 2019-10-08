@@ -58,10 +58,11 @@ extension GroupHomeViewController:  UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
         let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
         let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
         tabBarController.modalPresentationStyle = .fullScreen
+        let group: Group = groups![indexPath.row]
+        tabBarController.groupId = group.id
         present(tabBarController, animated: true)
     }
 }
