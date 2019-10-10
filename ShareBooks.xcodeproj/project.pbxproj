@@ -12,6 +12,12 @@
 		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
 		CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */; };
 		CA4488202316C8A80029F5DB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881F2316C8A80029F5DB /* UserManager.swift */; };
+		CA7B49FB234E0F610098564B /* GroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B49F9234E0F610098564B /* GroupSettingViewController.swift */; };
+		CA7B49FC234E0F610098564B /* GroupSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B49FA234E0F610098564B /* GroupSettingViewController.xib */; };
+		CA7B49FF234E15770098564B /* GroupSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B49FD234E15770098564B /* GroupSettingTableViewCell.swift */; };
+		CA7B4A00234E15770098564B /* GroupSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B49FE234E15770098564B /* GroupSettingTableViewCell.xib */; };
+		CA7B4A03234E2DDD0098564B /* BrowseGroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A01234E2DDD0098564B /* BrowseGroupSettingViewController.swift */; };
+		CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */; };
 		CA9515AB234B652100861D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9515AA234B652100861D56 /* User.swift */; };
 		CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */; };
 		CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */; };
@@ -66,6 +72,12 @@
 		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		CA44881F2316C8A80029F5DB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CA7B49F9234E0F610098564B /* GroupSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingViewController.swift; sourceTree = "<group>"; };
+		CA7B49FA234E0F610098564B /* GroupSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSettingViewController.xib; sourceTree = "<group>"; };
+		CA7B49FD234E15770098564B /* GroupSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingTableViewCell.swift; sourceTree = "<group>"; };
+		CA7B49FE234E15770098564B /* GroupSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSettingTableViewCell.xib; sourceTree = "<group>"; };
+		CA7B4A01234E2DDD0098564B /* BrowseGroupSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseGroupSettingViewController.swift; sourceTree = "<group>"; };
+		CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseGroupSettingViewController.xib; sourceTree = "<group>"; };
 		CA9515AA234B652100861D56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAB5B120230E2EE300DCEB34 /* ShareBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +165,19 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		CA7B49F8234E0F420098564B /* GroupSetting */ = {
+			isa = PBXGroup;
+			children = (
+				CA7B49F9234E0F610098564B /* GroupSettingViewController.swift */,
+				CA7B49FA234E0F610098564B /* GroupSettingViewController.xib */,
+				CA7B49FD234E15770098564B /* GroupSettingTableViewCell.swift */,
+				CA7B49FE234E15770098564B /* GroupSettingTableViewCell.xib */,
+				CA7B4A01234E2DDD0098564B /* BrowseGroupSettingViewController.swift */,
+				CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */,
+			);
+			path = GroupSetting;
+			sourceTree = "<group>";
+		};
 		CAB5B117230E2EE300DCEB34 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +199,7 @@
 		CAB5B122230E2EE300DCEB34 /* ShareBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CA7B49F8234E0F420098564B /* GroupSetting */,
 				CAB5B146230E8C9400DCEB34 /* SearchBooks */,
 				CAD60ABB23390468004D355F /* Bookshelf */,
 				CAD6B8EE23325F6800988F82 /* Group */,
@@ -357,7 +383,9 @@
 				CAB5B145230E8C3D00DCEB34 /* Tabbar.storyboard in Resources */,
 				CAB5B12E230E2EE500DCEB34 /* LaunchScreen.storyboard in Resources */,
 				CAD60ABA2337383E004D355F /* GroupTab.storyboard in Resources */,
+				CA7B49FC234E0F610098564B /* GroupSettingViewController.xib in Resources */,
 				CAC5754F23125FB400BF407E /* DetailBook.storyboard in Resources */,
+				CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */,
 				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
 				CAF2AB692344D7A1006772B7 /* GroupBookshelf.storyboard in Resources */,
 				CAE8FD372332657C00613420 /* CreateGroup.storyboard in Resources */,
@@ -366,6 +394,7 @@
 				CAD60ABD233904C8004D355F /* Bookshelf.storyboard in Resources */,
 				CAC575582312C0D600BF407E /* Result.storyboard in Resources */,
 				CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */,
+				CA7B4A00234E15770098564B /* GroupSettingTableViewCell.xib in Resources */,
 				CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */,
 				CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */,
 				CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */,
@@ -478,11 +507,14 @@
 			files = (
 				CAD6B8EB23289D1C00988F82 /* Api.swift in Sources */,
 				CAD6B8E823289C7D00988F82 /* RequestManager.swift in Sources */,
+				CA7B49FB234E0F610098564B /* GroupSettingViewController.swift in Sources */,
+				CA7B4A03234E2DDD0098564B /* BrowseGroupSettingViewController.swift in Sources */,
 				CAC575562312C0CC00BF407E /* ResultViewController.swift in Sources */,
 				CAB5B141230E6B3E00DCEB34 /* UIAlertController+Simple.swift in Sources */,
 				CAC575522312C02200BF407E /* CaptureViewController.swift in Sources */,
 				CAC5754C231252CE00BF407E /* DetailBookViewController.swift in Sources */,
 				CA4488202316C8A80029F5DB /* UserManager.swift in Sources */,
+				CA7B49FF234E15770098564B /* GroupSettingTableViewCell.swift in Sources */,
 				CAB5B14A230E8EE500DCEB34 /* SearchBooksViewController.swift in Sources */,
 				CA9515AB234B652100861D56 /* User.swift in Sources */,
 				CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */,

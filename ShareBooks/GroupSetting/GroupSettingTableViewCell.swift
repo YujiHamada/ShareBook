@@ -1,21 +1,17 @@
 //
-//  GroupHomeTableViewCell.swift
+//  GroupSettingTableViewCell.swift
 //  ShareBooks
 //
-//  Created by 濱田裕史 on 2019/09/22.
+//  Created by 濱田裕史 on 2019/10/09.
 //  Copyright © 2019 濱田裕史. All rights reserved.
 //
 
 import UIKit
 
-class GroupHomeTableViewCell: UITableViewCell {
+class GroupSettingTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var name: UILabel!
-    var group: Group! {
-        didSet {
-            name.text = group.name + "の本棚"
-        }
-    }
+    @IBOutlet weak var titleLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,5 +22,5 @@ class GroupHomeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

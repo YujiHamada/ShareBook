@@ -13,6 +13,15 @@ class GroupBookshelfViewController: UIViewController {
     @IBOutlet weak var collectionView: BookshelfCollectionView!
     fileprivate let refreshControl = UIRefreshControl()
     
+    private var group: Group!
+    
+    static func createWithStoryboard(group: Group) -> GroupBookshelfViewController {
+        let storyboard = UIStoryboard(name: "GroupBookshelf", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GroupBookshelfViewController") as! GroupBookshelfViewController
+        vc.group = group
+        return vc
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,16 +32,21 @@ class GroupBookshelfViewController: UIViewController {
         collectionView.dataSource = collectionView
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
-        navigationItem.title = "グループ本棚"
+        navigationItem.title = group.name + "の本棚"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ設定", style: .plain, target: self, action: #selector(groupSetting))
         
         requestBook()
     }
     
+    @objc func groupSetting() {
+        let groupSettingViewController = GroupSettingViewController(group: group)
+        self.navigationController?.pushViewController(groupSettingViewController, animated: true)
+    }
+    
     func requestBook() {
         
-        let tabbarController: TabBarController = self.tabBarController! as! TabBarController
         let parameter: [String: Any] = [
-            "group_id" : tabbarController.groupId!
+            "group_id" : group.id!
         ]
         RequestManager.shared.request(api: Api.groupBookList, parameters: parameter) { (result: Result<Array<Book>, Error>) in
             self.refreshControl.endRefreshing()

@@ -24,6 +24,9 @@ class GroupHomeViewController: UIViewController {
         self.tableview.delegate = self
         self.tableview.dataSource = self
         
+        navigationItem.title = "グループ一覧"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ作成", style: .plain, target: self, action: #selector(pushToCreateGroup(_:)))
+        
         RequestManager.shared.request(api: Api.groupList) { (result: Result<Array<Group>, Error>) in
             print(result)
             switch result {
@@ -37,7 +40,7 @@ class GroupHomeViewController: UIViewController {
         }
     }
     
-    @IBAction func pushToCreateGroup(_ sender: Any) {
+    @objc func pushToCreateGroup(_ sender: Any) {
         let createGroupViewController = CreateGroupViewController.createWithStoryboard()
         navigationController?.pushViewController(createGroupViewController, animated: true)
     }
@@ -57,12 +60,7 @@ extension GroupHomeViewController:  UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let storyboard = UIStoryboard(name: "Tabbar", bundle: nil)
-        let tabBarController = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-        tabBarController.modalPresentationStyle = .fullScreen
-        let group: Group = groups![indexPath.row]
-        tabBarController.groupId = group.id
-        present(tabBarController, animated: true)
+        let groupBookshelfViewController = GroupBookshelfViewController.createWithStoryboard(group: groups![indexPath.row])
+        self.navigationController?.pushViewController(groupBookshelfViewController, animated: true)
     }
 }

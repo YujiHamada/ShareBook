@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RBP-2N-ujy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RBP-2N-ujy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,15 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSJ-IC-WOZ">
-                                <rect key="frame" x="161" y="133" width="92" height="30"/>
-                                <state key="normal" title="グループ作成"/>
-                                <connections>
-                                    <action selector="pushToCreateGroup:" destination="djG-I5-KUO" eventType="touchUpInside" id="06E-2e-8iO"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gol-ph-iUA">
-                                <rect key="frame" x="0.0" y="195" width="414" height="618"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="GroupHomeTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupHomeTableViewCell" id="lKR-P8-VNF" customClass="GroupHomeTableViewCell" customModule="ShareBooks" customModuleProvider="target">
@@ -57,9 +50,7 @@
                         <constraints>
                             <constraint firstItem="bz0-QL-JxP" firstAttribute="bottom" secondItem="Gol-ph-iUA" secondAttribute="bottom" id="1jw-Nd-Oua"/>
                             <constraint firstItem="bz0-QL-JxP" firstAttribute="trailing" secondItem="Gol-ph-iUA" secondAttribute="trailing" id="Ds3-8Z-vvM"/>
-                            <constraint firstItem="NSJ-IC-WOZ" firstAttribute="top" secondItem="bz0-QL-JxP" secondAttribute="top" constant="45" id="Ylg-nX-K37"/>
-                            <constraint firstItem="Gol-ph-iUA" firstAttribute="top" secondItem="NSJ-IC-WOZ" secondAttribute="bottom" constant="32" id="d6h-1d-d8Y"/>
-                            <constraint firstItem="NSJ-IC-WOZ" firstAttribute="centerX" secondItem="bz0-QL-JxP" secondAttribute="centerX" id="dCP-FI-oea"/>
+                            <constraint firstItem="Gol-ph-iUA" firstAttribute="top" secondItem="bz0-QL-JxP" secondAttribute="top" id="Eop-do-6ug"/>
                             <constraint firstItem="Gol-ph-iUA" firstAttribute="leading" secondItem="bz0-QL-JxP" secondAttribute="leading" id="wJH-C8-tSC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bz0-QL-JxP"/>

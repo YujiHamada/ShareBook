@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="biT-QT-IzL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="biT-QT-IzL">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--グループ本棚-->
         <scene sceneID="ff0-pV-LYN">
             <objects>
-                <viewController id="9tw-PG-eyH" customClass="GroupBookshelfViewController" customModule="ShareBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupBookshelfViewController" id="9tw-PG-eyH" customClass="GroupBookshelfViewController" customModule="ShareBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30s-IR-GTg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,7 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rau-IE-q9a"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="vdp-HF-Gu4"/>
+                    <tabBarItem key="tabBarItem" title="グループ本棚" image="BookIcon" selectedImage="BookIcon" id="vdp-HF-Gu4"/>
                     <navigationItem key="navigationItem" id="DWp-5f-YJF"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -87,4 +87,7 @@
             <point key="canvasLocation" x="234.78260869565219" y="-190.17857142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BookIcon" width="30" height="30"/>
+    </resources>
 </document>
