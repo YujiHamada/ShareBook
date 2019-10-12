@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class BrowseGroupSettingViewController: UIViewController {
 
@@ -34,6 +35,8 @@ class BrowseGroupSettingViewController: UIViewController {
     
     @objc func copyInviteCode(_ sender:UITapGestureRecognizer) {
         UIPasteboard.general.string = inviteCodeLabel.text
-        print("clip board :\(UIPasteboard.general.string!)")
+        var style = ToastStyle()
+        style.backgroundColor = .cyan
+        self.view.makeToast("招待コードをコピーしました！", style: style)
     }
 }

@@ -11,6 +11,7 @@ target 'ShareBooks' do
   pod 'Firebase/DynamicLinks'
   pod 'Alamofire', '~> 4.8.2'
   pod 'AlamofireImage', '~> 3.5'
+  pod 'Toast-Swift', '~> 5.0.0'
   # Pods for ShareBooks
 
 end

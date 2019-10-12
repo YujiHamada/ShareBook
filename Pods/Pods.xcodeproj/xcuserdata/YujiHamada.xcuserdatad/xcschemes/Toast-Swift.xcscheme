@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9C808F5878018603F870BEE50F9AA657"
-               BuildableName = "leveldb.framework"
-               BlueprintName = "leveldb-library"
+               BlueprintIdentifier = "7932F5AA9AC1149B92EAB6EE824E70F3"
+               BuildableName = "Toast_Swift.framework"
+               BlueprintName = "Toast-Swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

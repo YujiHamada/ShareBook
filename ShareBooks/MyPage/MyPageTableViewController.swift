@@ -15,9 +15,20 @@ class MyPageTableViewController: UITableViewController {
 
     }
     
+    private enum TableRow: Int {
+        case manageAccount = 0
+        case joinRequest = 1
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        
+        let row: TableRow = TableRow(rawValue: indexPath.row)!
+        
+        switch row {
+        case .manageAccount:
             navigationController?.pushViewController(AccountViewController.createWithStoryboard(), animated: true)
+        case .joinRequest:
+            navigationController?.pushViewController(JoinRequestViewController(), animated: true)
         }
     }
 

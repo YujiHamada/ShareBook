@@ -18,6 +18,8 @@
 		CA7B4A00234E15770098564B /* GroupSettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B49FE234E15770098564B /* GroupSettingTableViewCell.xib */; };
 		CA7B4A03234E2DDD0098564B /* BrowseGroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A01234E2DDD0098564B /* BrowseGroupSettingViewController.swift */; };
 		CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */; };
+		CA7B4A07234F78DB0098564B /* JoinRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A05234F78DB0098564B /* JoinRequestViewController.swift */; };
+		CA7B4A08234F78DB0098564B /* JoinRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A06234F78DB0098564B /* JoinRequestViewController.xib */; };
 		CA9515AB234B652100861D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9515AA234B652100861D56 /* User.swift */; };
 		CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */; };
 		CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */; };
@@ -78,6 +80,8 @@
 		CA7B49FE234E15770098564B /* GroupSettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSettingTableViewCell.xib; sourceTree = "<group>"; };
 		CA7B4A01234E2DDD0098564B /* BrowseGroupSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseGroupSettingViewController.swift; sourceTree = "<group>"; };
 		CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseGroupSettingViewController.xib; sourceTree = "<group>"; };
+		CA7B4A05234F78DB0098564B /* JoinRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestViewController.swift; sourceTree = "<group>"; };
+		CA7B4A06234F78DB0098564B /* JoinRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinRequestViewController.xib; sourceTree = "<group>"; };
 		CA9515AA234B652100861D56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAB5B120230E2EE300DCEB34 /* ShareBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -275,6 +279,8 @@
 				CA4488152316BF360029F5DB /* MyPage.storyboard */,
 				CA44881B2316C1260029F5DB /* AccountViewController.swift */,
 				CA4488192316C11A0029F5DB /* Account.storyboard */,
+				CA7B4A05234F78DB0098564B /* JoinRequestViewController.swift */,
+				CA7B4A06234F78DB0098564B /* JoinRequestViewController.xib */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 				CAD60ABA2337383E004D355F /* GroupTab.storyboard in Resources */,
 				CA7B49FC234E0F610098564B /* GroupSettingViewController.xib in Resources */,
 				CAC5754F23125FB400BF407E /* DetailBook.storyboard in Resources */,
+				CA7B4A08234F78DB0098564B /* JoinRequestViewController.xib in Resources */,
 				CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */,
 				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
 				CAF2AB692344D7A1006772B7 /* GroupBookshelf.storyboard in Resources */,
@@ -423,6 +430,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -440,6 +448,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -535,6 +544,7 @@
 				CAC575492310D2BF00BF407E /* BookItem.swift in Sources */,
 				CAF2AB632344D31B006772B7 /* GroupBookshelfViewController.swift in Sources */,
 				CAE8FD33233264E300613420 /* GroupHomeViewController.swift in Sources */,
+				CA7B4A07234F78DB0098564B /* JoinRequestViewController.swift in Sources */,
 				CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */,
 				CAD60AC12339076B004D355F /* Book.swift in Sources */,
 				CAC57545230EE7E400BF407E /* VolumeInfo.swift in Sources */,
