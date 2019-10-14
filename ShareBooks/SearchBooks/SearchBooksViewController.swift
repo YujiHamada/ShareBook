@@ -40,9 +40,7 @@ class SearchBooksViewController: UIViewController {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
         navigationItem.title = "マイページ"
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
-        
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ変更", style: .plain, target: self, action: #selector(changeGroup))
-        
+                
         if let navigationBarFrame = navigationController?.navigationBar.bounds {
             let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
             searchBar.delegate = self
@@ -54,11 +52,6 @@ class SearchBooksViewController: UIViewController {
             self.searchBar = searchBar
         }
         
-    }
-    
-    @objc func changeGroup() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = GroupTabViewController.createWithStoryboard()
     }
     
     private func requestBook() {
