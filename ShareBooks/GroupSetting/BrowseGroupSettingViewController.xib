@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BrowseGroupSettingViewController" customModule="ShareBooks" customModuleProvider="target">
             <connections>
+                <outlet property="groupNameLabel" destination="Dp6-dW-h7L" id="n88-cR-D4K"/>
                 <outlet property="inviteCodeLabel" destination="xah-CE-cjJ" id="nwe-uT-r4d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,15 +20,50 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-CE-cjJ">
-                    <rect key="frame" x="64" y="438" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="グループ名；" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w57-hf-xIj">
+                    <rect key="frame" x="48" y="410.5" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="招待コード：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuR-g4-6I6">
+                    <rect key="frame" x="48" y="463.5" width="104" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dp6-dW-h7L">
+                    <rect key="frame" x="168" y="410.5" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="（↑タップでコピー！）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Srd-LT-mYZ">
+                    <rect key="frame" x="168" y="492.5" width="132" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xah-CE-cjJ">
+                    <rect key="frame" x="168" y="463.5" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xah-CE-cjJ" firstAttribute="leading" secondItem="HuR-g4-6I6" secondAttribute="trailing" constant="16" id="8rj-jb-Dgz"/>
+                <constraint firstItem="w57-hf-xIj" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-32" id="D1L-7h-TjE"/>
+                <constraint firstItem="xah-CE-cjJ" firstAttribute="centerY" secondItem="HuR-g4-6I6" secondAttribute="centerY" id="EU8-Dk-1Gi"/>
+                <constraint firstItem="HuR-g4-6I6" firstAttribute="top" secondItem="w57-hf-xIj" secondAttribute="bottom" constant="32" id="NEP-QL-zCD"/>
+                <constraint firstItem="HuR-g4-6I6" firstAttribute="leading" secondItem="w57-hf-xIj" secondAttribute="leading" id="QSX-bk-JxM"/>
+                <constraint firstItem="Srd-LT-mYZ" firstAttribute="top" secondItem="xah-CE-cjJ" secondAttribute="bottom" constant="8" id="TBe-Qg-Mbm"/>
+                <constraint firstItem="Dp6-dW-h7L" firstAttribute="centerY" secondItem="w57-hf-xIj" secondAttribute="centerY" id="adq-hr-2JQ"/>
+                <constraint firstItem="w57-hf-xIj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="s8w-xw-AYB"/>
+                <constraint firstItem="Dp6-dW-h7L" firstAttribute="leading" secondItem="w57-hf-xIj" secondAttribute="trailing" constant="16" id="uQn-h9-S6I"/>
+                <constraint firstItem="Srd-LT-mYZ" firstAttribute="leading" secondItem="xah-CE-cjJ" secondAttribute="leading" id="yDB-GP-1WW"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="122"/>
         </view>

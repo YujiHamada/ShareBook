@@ -20,6 +20,11 @@
 		CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */; };
 		CA7B4A07234F78DB0098564B /* JoinRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A05234F78DB0098564B /* JoinRequestViewController.swift */; };
 		CA7B4A08234F78DB0098564B /* JoinRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A06234F78DB0098564B /* JoinRequestViewController.xib */; };
+		CA7B4A0B2351F0DF0098564B /* JoinRequestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A092351F0DF0098564B /* JoinRequestListViewController.swift */; };
+		CA7B4A0C2351F0DF0098564B /* JoinRequestListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A0A2351F0DF0098564B /* JoinRequestListViewController.xib */; };
+		CA7B4A0F2351F3C00098564B /* JoinRequestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A0D2351F3C00098564B /* JoinRequestTableViewCell.swift */; };
+		CA7B4A102351F3C00098564B /* JoinRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A0E2351F3C00098564B /* JoinRequestTableViewCell.xib */; };
+		CA7B4A12235204590098564B /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A11235204590098564B /* JoinRequest.swift */; };
 		CA9515AB234B652100861D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9515AA234B652100861D56 /* User.swift */; };
 		CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */; };
 		CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */; };
@@ -82,6 +87,11 @@
 		CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrowseGroupSettingViewController.xib; sourceTree = "<group>"; };
 		CA7B4A05234F78DB0098564B /* JoinRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestViewController.swift; sourceTree = "<group>"; };
 		CA7B4A06234F78DB0098564B /* JoinRequestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinRequestViewController.xib; sourceTree = "<group>"; };
+		CA7B4A092351F0DF0098564B /* JoinRequestListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestListViewController.swift; sourceTree = "<group>"; };
+		CA7B4A0A2351F0DF0098564B /* JoinRequestListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinRequestListViewController.xib; sourceTree = "<group>"; };
+		CA7B4A0D2351F3C00098564B /* JoinRequestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestTableViewCell.swift; sourceTree = "<group>"; };
+		CA7B4A0E2351F3C00098564B /* JoinRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinRequestTableViewCell.xib; sourceTree = "<group>"; };
+		CA7B4A11235204590098564B /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
 		CA9515AA234B652100861D56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CAB5B120230E2EE300DCEB34 /* ShareBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +188,10 @@
 				CA7B49FE234E15770098564B /* GroupSettingTableViewCell.xib */,
 				CA7B4A01234E2DDD0098564B /* BrowseGroupSettingViewController.swift */,
 				CA7B4A02234E2DDD0098564B /* BrowseGroupSettingViewController.xib */,
+				CA7B4A092351F0DF0098564B /* JoinRequestListViewController.swift */,
+				CA7B4A0A2351F0DF0098564B /* JoinRequestListViewController.xib */,
+				CA7B4A0D2351F3C00098564B /* JoinRequestTableViewCell.swift */,
+				CA7B4A0E2351F3C00098564B /* JoinRequestTableViewCell.xib */,
 			);
 			path = GroupSetting;
 			sourceTree = "<group>";
@@ -257,6 +271,7 @@
 				CAD60AB2233707E2004D355F /* Group.swift */,
 				CAD60AC02339076B004D355F /* Book.swift */,
 				CA9515AA234B652100861D56 /* User.swift */,
+				CA7B4A11235204590098564B /* JoinRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -396,12 +411,14 @@
 				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
 				CAF2AB692344D7A1006772B7 /* GroupBookshelf.storyboard in Resources */,
 				CAE8FD372332657C00613420 /* CreateGroup.storyboard in Resources */,
+				CA7B4A102351F3C00098564B /* JoinRequestTableViewCell.xib in Resources */,
 				CAE8FD2F2332648E00613420 /* GroupHome.storyboard in Resources */,
 				CAB5B13F230E691100DCEB34 /* MailLogin.storyboard in Resources */,
 				CAD60ABD233904C8004D355F /* Bookshelf.storyboard in Resources */,
 				CAC575582312C0D600BF407E /* Result.storyboard in Resources */,
 				CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */,
 				CA7B4A00234E15770098564B /* GroupSettingTableViewCell.xib in Resources */,
+				CA7B4A0C2351F0DF0098564B /* JoinRequestListViewController.xib in Resources */,
 				CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */,
 				CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */,
 				CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */,
@@ -522,10 +539,12 @@
 				CAB5B141230E6B3E00DCEB34 /* UIAlertController+Simple.swift in Sources */,
 				CAC575522312C02200BF407E /* CaptureViewController.swift in Sources */,
 				CAC5754C231252CE00BF407E /* DetailBookViewController.swift in Sources */,
+				CA7B4A0B2351F0DF0098564B /* JoinRequestListViewController.swift in Sources */,
 				CA4488202316C8A80029F5DB /* UserManager.swift in Sources */,
 				CA7B49FF234E15770098564B /* GroupSettingTableViewCell.swift in Sources */,
 				CAB5B14A230E8EE500DCEB34 /* SearchBooksViewController.swift in Sources */,
 				CA9515AB234B652100861D56 /* User.swift in Sources */,
+				CA7B4A12235204590098564B /* JoinRequest.swift in Sources */,
 				CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */,
 				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
 				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,
@@ -538,6 +557,7 @@
 				CAD60AB523372DE1004D355F /* GroupHomeTableViewCell.swift in Sources */,
 				CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */,
 				CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */,
+				CA7B4A0F2351F3C00098564B /* JoinRequestTableViewCell.swift in Sources */,
 				CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */,
 				CAD60AB823373835004D355F /* GroupTabViewController.swift in Sources */,
 				CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */,

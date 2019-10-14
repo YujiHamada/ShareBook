@@ -12,6 +12,8 @@ class GroupHomeViewController: UIViewController {
 
     @IBOutlet weak var tableview: UITableView!
     private var groups: [Group]?
+    fileprivate let refreshControl = UIRefreshControl()
+    
     static func createWithStoryboard() -> GroupHomeViewController {
         let storyboard = UIStoryboard(name: "GroupHome", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "GroupHomeViewController") as! GroupHomeViewController
@@ -21,22 +23,32 @@ class GroupHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableview.delegate = self
-        self.tableview.dataSource = self
+        tableview.delegate = self
+        tableview.dataSource = self
+        tableview.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         
         navigationItem.title = "グループ一覧"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ作成", style: .plain, target: self, action: #selector(pushToCreateGroup(_:)))
         
+        request()
+    }
+    
+    @objc func refresh() {
+        request()
+    }
+    
+    private func request() {
         RequestManager.shared.request(api: Api.groupList) { (result: Result<Array<Group>, Error>) in
             print(result)
             switch result {
             case .success(let groups):
                 self.groups = groups
                 self.tableview.reloadData()
-                
+                self.refreshControl.endRefreshing()
             case .failure(let error):
                 print(error)
-            }   
+            }
         }
     }
     

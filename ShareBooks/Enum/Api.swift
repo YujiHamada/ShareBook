@@ -17,6 +17,9 @@ enum Api {
     case myBookList
     case groupBookList
     case joinRequest
+    case joinRequestList
+    case allowJoinRequest
+    case denyJoinRequest
     
     func parameterKey() -> String {
         switch self {
@@ -34,7 +37,12 @@ enum Api {
             return "books"
         case .joinRequest:
             return ""
-            
+        case .joinRequestList:
+            return "users"
+        case .allowJoinRequest:
+            return ""
+        case .denyJoinRequest:
+            return ""
         }
     }
     
@@ -54,6 +62,12 @@ enum Api {
             return domain() + "/group/books"
         case .joinRequest:
             return domain() + "/group/request"
+        case .joinRequestList:
+            return domain() + "/group/request/list"
+        case .allowJoinRequest:
+            return domain() + "/group/request/allow"
+        case .denyJoinRequest:
+            return domain() + "/group/request/deny"
         }
     }
     

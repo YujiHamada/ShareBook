@@ -41,7 +41,19 @@ class CreateGroupViewController: UIViewController {
         ]
         
         RequestManager.shared.request(api: Api.createGroup, parameters: parameters) { (result) in
-            print(result)
+            switch result {
+            case .success(_):
+                let alertController = UIAlertController.simpleOkAlert(title: "", message: "グループを作成しました", handler: { action in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                self.present(alertController, animated: true)
+                
+            case .failure(let error):
+                let alertController = UIAlertController.simpleOkAlert(title: "", message: "グループ作成に失敗しました", handler: { action in
+                    self.navigationController?.popViewController(animated: true)
+                })
+                self.present(alertController, animated: true)
+            }
         }
     }
     

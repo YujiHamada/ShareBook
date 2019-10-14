@@ -12,6 +12,7 @@ import Toast_Swift
 class BrowseGroupSettingViewController: UIViewController {
 
     @IBOutlet weak var inviteCodeLabel: UILabel!
+    @IBOutlet weak var groupNameLabel: UILabel!
     var group: Group
     
     init(group: Group) {
@@ -27,6 +28,7 @@ class BrowseGroupSettingViewController: UIViewController {
         super.viewDidLoad()
 
         inviteCodeLabel.text = group.inviteCode
+        groupNameLabel.text = group.name
         inviteCodeLabel.isUserInteractionEnabled = true
 
         let tg = UITapGestureRecognizer(target: self, action: #selector(copyInviteCode(_:)))
