@@ -65,4 +65,35 @@ class UserManager {
         } catch {
         }
     }
+    
+    func closeAccount() {
+        let alertController = UIAlertController(title: "退会", message: "退会しますか？アカウントを削除します", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "退会する", style: .default, handler: { action in
+            self.requestCloseAccount()
+        })
+        alertController.addAction(UIAlertAction(title: "キャンセル", style: .default, handler: nil))
+        alertController.addAction(okAction)
+        UIApplication.topViewController()!.present(alertController, animated: true, completion: nil)
+    }
+    
+    func requestCloseAccount() {
+        RequestManager.shared.requestStatus(api: Api.closeAccount) { (result) in
+            switch result {
+            case .success(_):
+                let alertController = UIAlertController(title: "退会完了", message: "退会処理が完了しました", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+                    LoginManager().logOut()
+                    self.logout()
+                    UIApplication.shared.keyWindow?.rootViewController = LoginViewController.createWithStoryboard()
+                })
+                alertController.addAction(okAction)
+                UIApplication.topViewController()!.present(alertController, animated: true, completion: nil)
+            case .failure(_):
+                let alertController = UIAlertController(title: "退会失敗", message: "退会処理に失敗しました。何度も失敗する場合はお問い合わせください。", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(okAction)
+                UIApplication.topViewController()?.present(alertController, animated: true, completion: nil)
+            }
+        }
+    }
 }

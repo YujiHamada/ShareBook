@@ -29,7 +29,7 @@ class AccountViewController: UIViewController {
     }
     
     @IBAction func closeAccount(_ sender: Any) {
-        
+        userManager.closeAccount()
     }
     
 }

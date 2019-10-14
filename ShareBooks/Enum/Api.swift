@@ -20,6 +20,7 @@ enum Api {
     case joinRequestList
     case allowJoinRequest
     case denyJoinRequest
+    case closeAccount
     
     func parameterKey() -> String {
         switch self {
@@ -42,6 +43,8 @@ enum Api {
         case .allowJoinRequest:
             return ""
         case .denyJoinRequest:
+            return ""
+        case .closeAccount:
             return ""
         }
     }
@@ -68,6 +71,8 @@ enum Api {
             return domain() + "/group/request/allow"
         case .denyJoinRequest:
             return domain() + "/group/request/deny"
+        case .closeAccount:
+            return domain() + "/user/close"
         }
     }
     

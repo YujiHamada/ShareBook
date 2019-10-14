@@ -68,10 +68,7 @@ extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate {
                     "name": firebaseUser.displayName ?? "",
                 ]
                 RequestManager.shared.request(api: Api.signupin, parameters: parameters, completion: { (result) in
-                    
-                    let navigationController = UINavigationController(rootViewController: GroupTabViewController.createWithStoryboard())
-                    navigationController.modalPresentationStyle = .fullScreen
-                    self.present(navigationController, animated: true)
+                    self.present(GroupTabViewController.createWithStoryboard(), animated: true)
                 })
                 
             }

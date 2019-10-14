@@ -66,16 +66,20 @@ extension JoinRequestListViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users![indexPath.row]
         let alertController = UIAlertController(title: "グループ参加申請", message: "参加許可しますか？", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "許可", style: .default, handler: { action in
-            self.allowRequst(user: user)
-        })
         
         let cancelAction = UIAlertAction(title: "却下", style: .cancel, handler: { action in
             self.denyRequst(user: user)
         })
         
+        let okAction = UIAlertAction(title: "許可", style: .default, handler: { action in
+            self.allowRequst(user: user)
+        })
+        
+        let holdAction = UIAlertAction(title: "保留", style: .default, handler:nil)
+        
         alertController.addAction(okAction)
         alertController.addAction(cancelAction)
+        alertController.addAction(holdAction)
         present(alertController, animated: true, completion: nil)
     }
     
