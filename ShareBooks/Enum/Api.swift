@@ -21,6 +21,8 @@ enum Api {
     case allowJoinRequest
     case denyJoinRequest
     case closeAccount
+    case userProfile
+    case updateProfile
     
     func parameterKey() -> String {
         switch self {
@@ -46,7 +48,12 @@ enum Api {
             return ""
         case .closeAccount:
             return ""
+        case .userProfile:
+            return "user"
+        case .updateProfile:
+            return ""
         }
+        
     }
     
     func url() -> String {
@@ -73,6 +80,10 @@ enum Api {
             return domain() + "/group/request/deny"
         case .closeAccount:
             return domain() + "/user/close"
+        case .userProfile:
+            return domain() + "/user/profile"
+        case .updateProfile:
+            return domain() + "/user/update"
         }
     }
     

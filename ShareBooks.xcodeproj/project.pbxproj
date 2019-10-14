@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA40C4E923549E8B00548A0C /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4E723549E8A00548A0C /* ProfileSettingViewController.swift */; };
+		CA40C4EA23549E8B00548A0C /* ProfileSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA40C4E823549E8A00548A0C /* ProfileSettingViewController.xib */; };
 		CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488152316BF360029F5DB /* MyPage.storyboard */; };
 		CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488192316C11A0029F5DB /* Account.storyboard */; };
 		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
@@ -74,6 +76,8 @@
 		608916E1DD672BC26D6BECA2 /* Pods-ShareBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks.release.xcconfig"; sourceTree = "<group>"; };
 		9F368772EA0BC02ED7D05773 /* Pods-ShareBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShareBooks/Pods-ShareBooks.debug.xcconfig"; sourceTree = "<group>"; };
 		C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA40C4E723549E8A00548A0C /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
+		CA40C4E823549E8A00548A0C /* ProfileSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSettingViewController.xib; sourceTree = "<group>"; };
 		CA4488152316BF360029F5DB /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		CA4488192316C11A0029F5DB /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -296,6 +300,8 @@
 				CA4488192316C11A0029F5DB /* Account.storyboard */,
 				CA7B4A05234F78DB0098564B /* JoinRequestViewController.swift */,
 				CA7B4A06234F78DB0098564B /* JoinRequestViewController.xib */,
+				CA40C4E723549E8A00548A0C /* ProfileSettingViewController.swift */,
+				CA40C4E823549E8A00548A0C /* ProfileSettingViewController.xib */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 				CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */,
 				CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */,
 				CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */,
+				CA40C4EA23549E8B00548A0C /* ProfileSettingViewController.xib in Resources */,
 				CAC575542312C09A00BF407E /* Capture.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +553,7 @@
 				CA9515AB234B652100861D56 /* User.swift in Sources */,
 				CA7B4A12235204590098564B /* JoinRequest.swift in Sources */,
 				CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */,
+				CA40C4E923549E8B00548A0C /* ProfileSettingViewController.swift in Sources */,
 				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
 				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,
 				CAD60AC323390947004D355F /* BookshelfTableViewCell.swift in Sources */,

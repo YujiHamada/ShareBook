@@ -18,6 +18,7 @@ class MyPageTableViewController: UITableViewController {
     private enum TableRow: Int {
         case manageAccount = 0
         case joinRequest = 1
+        case profileSetting = 2
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -29,6 +30,8 @@ class MyPageTableViewController: UITableViewController {
             navigationController?.pushViewController(AccountViewController.createWithStoryboard(), animated: true)
         case .joinRequest:
             navigationController?.pushViewController(JoinRequestViewController(), animated: true)
+        case .profileSetting:
+            navigationController?.pushViewController(ProfileSettingViewController(), animated: true)
         }
     }
 
