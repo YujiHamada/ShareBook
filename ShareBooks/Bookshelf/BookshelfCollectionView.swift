@@ -21,8 +21,10 @@ class BookshelfCollectionView: UICollectionView, UICollectionViewDataSource, UIC
         }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //        let destinationViewController = DetailBookViewController.createWithStoryboard(bookItem: bookItems![indexPath.row])
-    //        self.navigationController?.pushViewController(destinationViewController, animated: true)
+            let book = books![indexPath.row]
+            if (book.users != nil) {
+                collectionView.parentViewController()?.navigationController?.pushViewController(BookDetailViewController(book: book), animated: true)
+            }
         }
 
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -43,4 +45,17 @@ class BookshelfCollectionView: UICollectionView, UICollectionViewDataSource, UIC
             return CGSize(width: widthPerItem, height: widthPerItem / 148 * 210 + 50)
         }
 
+}
+
+extension UIView {
+    func parentViewController() -> UIViewController? {
+        var parentResponder: UIResponder? = self
+        while true {
+            guard let nextResponder = parentResponder?.next else { return nil }
+            if let viewController = nextResponder as? UIViewController {
+                return viewController
+            }
+            parentResponder = nextResponder
+        }
+    }
 }

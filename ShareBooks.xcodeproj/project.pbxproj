@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		CA40C4E923549E8B00548A0C /* ProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4E723549E8A00548A0C /* ProfileSettingViewController.swift */; };
 		CA40C4EA23549E8B00548A0C /* ProfileSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA40C4E823549E8A00548A0C /* ProfileSettingViewController.xib */; };
+		CA40C4ED2354BFBE00548A0C /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4EB2354BFBE00548A0C /* BookDetailViewController.swift */; };
+		CA40C4EE2354BFBE00548A0C /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA40C4EC2354BFBE00548A0C /* BookDetailViewController.xib */; };
+		CA40C4F22354C26300548A0C /* SimpleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4F02354C26300548A0C /* SimpleLabelTableViewCell.swift */; };
+		CA40C4F32354C26300548A0C /* SimpleLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA40C4F12354C26300548A0C /* SimpleLabelTableViewCell.xib */; };
 		CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488152316BF360029F5DB /* MyPage.storyboard */; };
 		CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488192316C11A0029F5DB /* Account.storyboard */; };
 		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
@@ -78,6 +82,10 @@
 		C150549B8337AF522C6DDD13 /* Pods_ShareBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA40C4E723549E8A00548A0C /* ProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingViewController.swift; sourceTree = "<group>"; };
 		CA40C4E823549E8A00548A0C /* ProfileSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileSettingViewController.xib; sourceTree = "<group>"; };
+		CA40C4EB2354BFBE00548A0C /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		CA40C4EC2354BFBE00548A0C /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
+		CA40C4F02354C26300548A0C /* SimpleLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabelTableViewCell.swift; sourceTree = "<group>"; };
+		CA40C4F12354C26300548A0C /* SimpleLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLabelTableViewCell.xib; sourceTree = "<group>"; };
 		CA4488152316BF360029F5DB /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		CA4488192316C11A0029F5DB /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -172,6 +180,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CA40C4EF2354C23900548A0C /* UIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				CA40C4F02354C26300548A0C /* SimpleLabelTableViewCell.swift */,
+				CA40C4F12354C26300548A0C /* SimpleLabelTableViewCell.xib */,
+			);
+			path = UIComponent;
+			sourceTree = "<group>";
+		};
 		CA448821231A45890029F5DB /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +238,7 @@
 		CAB5B122230E2EE300DCEB34 /* ShareBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CA40C4EF2354C23900548A0C /* UIComponent */,
 				CA7B49F8234E0F420098564B /* GroupSetting */,
 				CAB5B146230E8C9400DCEB34 /* SearchBooks */,
 				CAD60ABB23390468004D355F /* Bookshelf */,
@@ -315,6 +333,8 @@
 				CAF2AB6023438335006772B7 /* BookshelfCollectionView.swift */,
 				CAF2AB622344D31B006772B7 /* GroupBookshelfViewController.swift */,
 				CAF2AB682344D7A1006772B7 /* GroupBookshelf.storyboard */,
+				CA40C4EB2354BFBE00548A0C /* BookDetailViewController.swift */,
+				CA40C4EC2354BFBE00548A0C /* BookDetailViewController.xib */,
 			);
 			path = Bookshelf;
 			sourceTree = "<group>";
@@ -407,6 +427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA40C4EE2354BFBE00548A0C /* BookDetailViewController.xib in Resources */,
 				CAB5B145230E8C3D00DCEB34 /* Tabbar.storyboard in Resources */,
 				CAB5B12E230E2EE500DCEB34 /* LaunchScreen.storyboard in Resources */,
 				CAD60ABA2337383E004D355F /* GroupTab.storyboard in Resources */,
@@ -416,6 +437,7 @@
 				CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */,
 				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
 				CAF2AB692344D7A1006772B7 /* GroupBookshelf.storyboard in Resources */,
+				CA40C4F32354C26300548A0C /* SimpleLabelTableViewCell.xib in Resources */,
 				CAE8FD372332657C00613420 /* CreateGroup.storyboard in Resources */,
 				CA7B4A102351F3C00098564B /* JoinRequestTableViewCell.xib in Resources */,
 				CAE8FD2F2332648E00613420 /* GroupHome.storyboard in Resources */,
@@ -567,6 +589,7 @@
 				CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */,
 				CA7B4A0F2351F3C00098564B /* JoinRequestTableViewCell.swift in Sources */,
 				CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */,
+				CA40C4ED2354BFBE00548A0C /* BookDetailViewController.swift in Sources */,
 				CAD60AB823373835004D355F /* GroupTabViewController.swift in Sources */,
 				CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */,
 				CAC575492310D2BF00BF407E /* BookItem.swift in Sources */,
@@ -575,6 +598,7 @@
 				CA7B4A07234F78DB0098564B /* JoinRequestViewController.swift in Sources */,
 				CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */,
 				CAD60AC12339076B004D355F /* Book.swift in Sources */,
+				CA40C4F22354C26300548A0C /* SimpleLabelTableViewCell.swift in Sources */,
 				CAC57545230EE7E400BF407E /* VolumeInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
