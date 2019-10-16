@@ -32,13 +32,17 @@ class JoinRequestViewController: UIViewController {
         RequestManager.shared.requestStatus(api: Api.joinRequest, parameters: parameters) { (result) in
             switch result {
             case .success(_):
-                print("")
                 let alertController = UIAlertController.simpleOkAlert(title: "", message: "参加申請を送りました！")
                 self.present(alertController, animated: true)
                                 
             case .failure(let error):
-                print(error)
+                let alertController = UIAlertController.simpleOkAlert(title: "", message: error.localizedDescription)
+                self.present(alertController, animated: true)
             }
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.inviteCodeTextField.endEditing(true)
     }
 }
