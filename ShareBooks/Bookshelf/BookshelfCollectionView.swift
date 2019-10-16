@@ -35,14 +35,13 @@ class BookshelfCollectionView: UICollectionView, UICollectionViewDataSource, UIC
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let sectionInsets = UIEdgeInsets(top: 10.0, left: 2.0, bottom: 2.0, right: 2.0)
+            let sectionInsets = UIEdgeInsets(top: 10.0, left: 0, bottom: 2.0, right: 0)
             let itemsPerRow: CGFloat = 2
             
             let paddingSpace = sectionInsets.left * (itemsPerRow + 1)
             let availableWidth = superview!.frame.width - paddingSpace
-            let widthPerItem = availableWidth / itemsPerRow - 20
-            print(CGSize(width: widthPerItem, height: widthPerItem / 148 * 210 + 50))
-            return CGSize(width: widthPerItem, height: widthPerItem / 148 * 210 + 50)
+            let widthPerItem = availableWidth / itemsPerRow - 10
+            return CGSize(width: widthPerItem, height: widthPerItem / 148 * 200)
         }
 
 }

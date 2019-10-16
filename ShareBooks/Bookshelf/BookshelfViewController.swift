@@ -23,7 +23,7 @@ class BookshelfViewController: UIViewController {
         collectionView.dataSource = collectionView
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
-        navigationItem.title = "本棚"
+        navigationItem.title = "自分の本棚"
         
         requestBook()
     }

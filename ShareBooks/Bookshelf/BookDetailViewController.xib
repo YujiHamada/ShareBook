@@ -27,12 +27,12 @@
                     </constraints>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6VY-A6-PbW">
-                    <rect key="frame" x="0.0" y="468" width="414" height="394"/>
+                    <rect key="frame" x="0.0" y="462" width="414" height="400"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="●この本を持っている人" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2v-6a-iml">
-                    <rect key="frame" x="25" y="446" width="357" height="18"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <rect key="frame" x="25" y="446" width="357" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -46,7 +46,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="6VY-A6-PbW" secondAttribute="bottom" id="apD-2U-fxd"/>
                 <constraint firstItem="6VY-A6-PbW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bbe-gI-5jp"/>
                 <constraint firstItem="A2v-6a-iml" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="hB7-M8-8Sm"/>
-                <constraint firstItem="6VY-A6-PbW" firstAttribute="top" secondItem="A2v-6a-iml" secondAttribute="bottom" constant="4" id="hOn-sC-drZ"/>
+                <constraint firstItem="6VY-A6-PbW" firstAttribute="top" secondItem="A2v-6a-iml" secondAttribute="bottom" id="hOn-sC-drZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="A2v-6a-iml" secondAttribute="trailing" constant="32" id="jLU-gL-rLd"/>
                 <constraint firstItem="A2v-6a-iml" firstAttribute="top" secondItem="aQZ-F6-0jD" secondAttribute="bottom" constant="20" id="pgf-nI-kI7"/>
             </constraints>
