@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (googleSignUp))
         googleSignInView.addGestureRecognizer(gesture)
         
+        navigationItem.title = "ログイン・新規作成"
     }
     
     @objc func googleSignUp(_ sender: Any) {

@@ -37,7 +37,7 @@ class SearchBooksViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
+        self.view.backgroundColor = .alabaster
         navigationItem.title = "マイページ"
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
                 

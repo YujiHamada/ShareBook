@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,14 +22,23 @@
                                     <constraint firstAttribute="width" secondItem="DZq-f8-9j9" secondAttribute="height" multiplier="148:210" id="Zd5-Mq-wgd"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p73-h0-TJ6">
-                                <rect key="frame" x="32" y="452" width="350" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p73-h0-TJ6">
+                                <rect key="frame" x="32" y="452" width="350" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-nE-bGJ">
-                                <rect key="frame" x="191.5" y="523" width="31" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKM-e5-hv7">
+                                <rect key="frame" x="32" y="477" width="350" height="285"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Raf-nE-bGJ" customClass="BasicPositiveButton" customModule="ShareBooks" customModuleProvider="target">
+                                <rect key="frame" x="32" y="794" width="350" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fzg-Ht-qO1"/>
+                                </constraints>
                                 <state key="normal" title="登録"/>
                                 <connections>
                                     <action selector="register:" destination="Tw6-yE-gBq" eventType="touchUpInside" id="vnE-6m-6mB"/>
@@ -41,15 +50,21 @@
                             <constraint firstItem="p73-h0-TJ6" firstAttribute="leading" secondItem="jbZ-dQ-ywM" secondAttribute="leading" constant="32" id="5Dz-kB-QDJ"/>
                             <constraint firstItem="p73-h0-TJ6" firstAttribute="top" secondItem="DZq-f8-9j9" secondAttribute="bottom" constant="46.5" id="8uU-QL-DX4"/>
                             <constraint firstItem="Raf-nE-bGJ" firstAttribute="centerX" secondItem="jbZ-dQ-ywM" secondAttribute="centerX" id="Ajo-Zs-VFr"/>
+                            <constraint firstItem="jbZ-dQ-ywM" firstAttribute="bottom" secondItem="Raf-nE-bGJ" secondAttribute="bottom" constant="28" id="YCf-qG-8a2"/>
                             <constraint firstItem="p73-h0-TJ6" firstAttribute="centerX" secondItem="jbZ-dQ-ywM" secondAttribute="centerX" id="a0X-xG-2SS"/>
                             <constraint firstItem="DZq-f8-9j9" firstAttribute="centerX" secondItem="jbZ-dQ-ywM" secondAttribute="centerX" id="b2c-OD-8DE"/>
+                            <constraint firstItem="mKM-e5-hv7" firstAttribute="leading" secondItem="jbZ-dQ-ywM" secondAttribute="leading" constant="32" id="gSA-0z-5Ya"/>
+                            <constraint firstItem="mKM-e5-hv7" firstAttribute="centerX" secondItem="jbZ-dQ-ywM" secondAttribute="centerX" id="gU2-Kh-9GL"/>
                             <constraint firstItem="DZq-f8-9j9" firstAttribute="top" secondItem="jbZ-dQ-ywM" secondAttribute="top" constant="58" id="i9M-84-dqg"/>
-                            <constraint firstItem="Raf-nE-bGJ" firstAttribute="top" secondItem="p73-h0-TJ6" secondAttribute="bottom" constant="50" id="qXX-6A-VUg"/>
+                            <constraint firstItem="Raf-nE-bGJ" firstAttribute="leading" secondItem="jbZ-dQ-ywM" secondAttribute="leading" constant="32" id="jga-fR-TBJ"/>
+                            <constraint firstItem="mKM-e5-hv7" firstAttribute="top" secondItem="p73-h0-TJ6" secondAttribute="bottom" constant="25" id="nru-kh-UyC"/>
+                            <constraint firstItem="Raf-nE-bGJ" firstAttribute="top" secondItem="mKM-e5-hv7" secondAttribute="bottom" constant="32" id="oUr-xF-yc7"/>
                             <constraint firstItem="DZq-f8-9j9" firstAttribute="leading" secondItem="jbZ-dQ-ywM" secondAttribute="leading" constant="100" id="rms-YI-fLd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jbZ-dQ-ywM"/>
                     </view>
                     <connections>
+                        <outlet property="descriptionLabel" destination="mKM-e5-hv7" id="bjI-No-UdQ"/>
                         <outlet property="imageView" destination="DZq-f8-9j9" id="rgo-WT-z5S"/>
                         <outlet property="titleLabel" destination="p73-h0-TJ6" id="BGG-ws-dTe"/>
                     </connections>

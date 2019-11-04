@@ -31,7 +31,7 @@ class GroupBookshelfViewController: UIViewController {
         collectionView.delegate = collectionView
         collectionView.dataSource = collectionView
         collectionView.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "grain")!)
+        self.view.backgroundColor = .alabaster
         navigationItem.title = group.name + "の本棚"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "グループ設定", style: .plain, target: self, action: #selector(groupSetting))
         

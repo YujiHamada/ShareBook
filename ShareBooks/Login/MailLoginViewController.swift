@@ -22,6 +22,7 @@ class MailLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "メールアドレスでログイン・新規作成"
     }
     
     @IBAction func mailLogin(_ sender: Any) {

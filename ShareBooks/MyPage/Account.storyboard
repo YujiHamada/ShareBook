@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,24 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gO-8r-mLl">
-                                <rect key="frame" x="169" y="374" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="ログアウト"/>
-                                <connections>
-                                    <action selector="logout:" destination="6IV-2m-G9i" eventType="touchUpInside" id="sr6-Q0-o2h"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-Tl-vdZ">
-                                <rect key="frame" x="192" y="478" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lf-Tl-vdZ" customClass="BasicPositiveButton" customModule="ShareBooks" customModuleProvider="target">
+                                <rect key="frame" x="32" y="483" width="350" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="yHw-Jy-ji3"/>
+                                </constraints>
                                 <state key="normal" title="退会"/>
                                 <connections>
                                     <action selector="closeAccount:" destination="6IV-2m-G9i" eventType="touchUpInside" id="4mJ-6j-3oP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gO-8r-mLl" customClass="BasicPositiveButton" customModule="ShareBooks" customModuleProvider="target">
+                                <rect key="frame" x="32" y="383" width="350" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="GQA-WM-n3W"/>
+                                </constraints>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="logout:" destination="6IV-2m-G9i" eventType="touchUpInside" id="sr6-Q0-o2h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3lf-Tl-vdZ" firstAttribute="leading" secondItem="AkW-nq-Vbe" secondAttribute="leading" constant="32" id="0Dn-HD-Tks"/>
+                            <constraint firstItem="1gO-8r-mLl" firstAttribute="centerX" secondItem="AkW-nq-Vbe" secondAttribute="centerX" id="1hK-Kx-Oh4"/>
+                            <constraint firstItem="1gO-8r-mLl" firstAttribute="leading" secondItem="AkW-nq-Vbe" secondAttribute="leading" constant="32" id="4k7-DL-x1F"/>
+                            <constraint firstItem="3lf-Tl-vdZ" firstAttribute="centerX" secondItem="AkW-nq-Vbe" secondAttribute="centerX" id="KAH-Kw-PBw"/>
+                            <constraint firstItem="1gO-8r-mLl" firstAttribute="centerY" secondItem="AkW-nq-Vbe" secondAttribute="centerY" constant="-50" id="lGp-j0-WYV"/>
+                            <constraint firstItem="3lf-Tl-vdZ" firstAttribute="centerY" secondItem="AkW-nq-Vbe" secondAttribute="centerY" constant="50" id="yG4-nW-H10"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="AkW-nq-Vbe"/>
                     </view>
                 </viewController>

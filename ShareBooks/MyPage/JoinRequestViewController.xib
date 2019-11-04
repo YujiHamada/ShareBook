@@ -24,9 +24,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZy-AG-2p0">
-                    <rect key="frame" x="184" y="469" width="46" height="30"/>
-                    <state key="normal" title="参加！"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZy-AG-2p0" customClass="BasicPositiveButton" customModule="ShareBooks" customModuleProvider="target">
+                    <rect key="frame" x="32" y="454" width="350" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="nN0-6J-RGO"/>
+                    </constraints>
+                    <state key="normal" title="参加"/>
                     <connections>
                         <action selector="joinRequest:" destination="-1" eventType="touchUpInside" id="DYe-2n-duE"/>
                     </connections>
@@ -37,7 +40,8 @@
                 <constraint firstItem="XHt-cI-qAL" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-48" id="Nte-3W-WZj"/>
                 <constraint firstItem="XHt-cI-qAL" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OZ1-f4-J5d"/>
                 <constraint firstItem="XHt-cI-qAL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="RV8-WF-JDU"/>
-                <constraint firstItem="CZy-AG-2p0" firstAttribute="top" secondItem="XHt-cI-qAL" secondAttribute="bottom" constant="47" id="cpq-Cp-DRT"/>
+                <constraint firstItem="CZy-AG-2p0" firstAttribute="top" secondItem="XHt-cI-qAL" secondAttribute="bottom" constant="32" id="cpq-Cp-DRT"/>
+                <constraint firstItem="CZy-AG-2p0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="gyC-sz-gF8"/>
                 <constraint firstItem="CZy-AG-2p0" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="q4M-Mk-P2d"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

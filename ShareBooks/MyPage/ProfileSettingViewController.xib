@@ -30,8 +30,11 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54t-kX-LIf">
-                    <rect key="frame" x="191.5" y="157" width="31" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54t-kX-LIf" customClass="BasicPositiveButton" customModule="ShareBooks" customModuleProvider="target">
+                    <rect key="frame" x="32" y="157" width="350" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="mXr-VM-fpj"/>
+                    </constraints>
                     <state key="normal" title="更新"/>
                     <connections>
                         <action selector="update:" destination="-1" eventType="touchUpInside" id="2EU-q5-gGU"/>
@@ -47,6 +50,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ew0-CC-8DY" secondAttribute="trailing" constant="32" id="WRO-1E-EfX"/>
                 <constraint firstItem="54t-kX-LIf" firstAttribute="top" secondItem="ew0-CC-8DY" secondAttribute="bottom" constant="48" id="c4q-s5-hv3"/>
                 <constraint firstItem="ew0-CC-8DY" firstAttribute="centerY" secondItem="x1c-64-ks7" secondAttribute="centerY" id="h7b-BA-aBw"/>
+                <constraint firstItem="54t-kX-LIf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="mwC-xQ-9dI"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="123"/>

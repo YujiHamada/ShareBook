@@ -19,13 +19,22 @@ class AccountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.title = "アカウント管理"
         
     }
     
     @IBAction func logout(_ sender: Any) {
-        userManager.logout()
-        UIApplication.shared.keyWindow?.rootViewController = LoginViewController.createWithStoryboard()
+        
+        let alertController = UIAlertController(title: "", message: "ログアウトしてよろしいでしょうか？", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { action in
+            self.userManager.logout()
+            UIApplication.shared.keyWindow?.rootViewController = LoginViewController.createWithStoryboard()
+        })
+        alertController.addAction(okAction)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func closeAccount(_ sender: Any) {

@@ -13,6 +13,8 @@
 		CA40C4EE2354BFBE00548A0C /* BookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA40C4EC2354BFBE00548A0C /* BookDetailViewController.xib */; };
 		CA40C4F22354C26300548A0C /* SimpleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4F02354C26300548A0C /* SimpleLabelTableViewCell.swift */; };
 		CA40C4F32354C26300548A0C /* SimpleLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA40C4F12354C26300548A0C /* SimpleLabelTableViewCell.xib */; };
+		CA40C4F5235EB94500548A0C /* BasicPositiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4F4235EB94500548A0C /* BasicPositiveButton.swift */; };
+		CA40C4F7235EBAD800548A0C /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA40C4F6235EBAD800548A0C /* UIColor+hex.swift */; };
 		CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488152316BF360029F5DB /* MyPage.storyboard */; };
 		CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA4488192316C11A0029F5DB /* Account.storyboard */; };
 		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
@@ -86,6 +88,8 @@
 		CA40C4EC2354BFBE00548A0C /* BookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailViewController.xib; sourceTree = "<group>"; };
 		CA40C4F02354C26300548A0C /* SimpleLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabelTableViewCell.swift; sourceTree = "<group>"; };
 		CA40C4F12354C26300548A0C /* SimpleLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLabelTableViewCell.xib; sourceTree = "<group>"; };
+		CA40C4F4235EB94500548A0C /* BasicPositiveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicPositiveButton.swift; sourceTree = "<group>"; };
+		CA40C4F6235EBAD800548A0C /* UIColor+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
 		CA4488152316BF360029F5DB /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		CA4488192316C11A0029F5DB /* Account.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
 		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +261,7 @@
 				CAB5B12F230E2EE500DCEB34 /* Info.plist */,
 				CAB5B144230E8C3D00DCEB34 /* Tabbar.storyboard */,
 				CAC5754623102AE900BF407E /* TabBarController.swift */,
+				CA40C4F4235EB94500548A0C /* BasicPositiveButton.swift */,
 			);
 			path = ShareBooks;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			children = (
 				CAB5B142230E8C2000DCEB34 /* UIApplication+ViewController.swift */,
 				CAB5B140230E6B3E00DCEB34 /* UIAlertController+Simple.swift */,
+				CA40C4F6235EBAD800548A0C /* UIColor+hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -581,6 +587,7 @@
 				CAD60AC323390947004D355F /* BookshelfTableViewCell.swift in Sources */,
 				CAF2AB6123438335006772B7 /* BookshelfCollectionView.swift in Sources */,
 				CAD60ABF233904E2004D355F /* BookshelfViewController.swift in Sources */,
+				CA40C4F7235EBAD800548A0C /* UIColor+hex.swift in Sources */,
 				CAD60AB3233707E2004D355F /* Group.swift in Sources */,
 				CAB5B13D230E690300DCEB34 /* MailLoginViewController.swift in Sources */,
 				CAB5B143230E8C2100DCEB34 /* UIApplication+ViewController.swift in Sources */,
@@ -594,6 +601,7 @@
 				CAD6B8ED23289F8E00988F82 /* ResponseStatus.swift in Sources */,
 				CAC575492310D2BF00BF407E /* BookItem.swift in Sources */,
 				CAF2AB632344D31B006772B7 /* GroupBookshelfViewController.swift in Sources */,
+				CA40C4F5235EB94500548A0C /* BasicPositiveButton.swift in Sources */,
 				CAE8FD33233264E300613420 /* GroupHomeViewController.swift in Sources */,
 				CA7B4A07234F78DB0098564B /* JoinRequestViewController.swift in Sources */,
 				CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */,

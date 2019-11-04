@@ -13,6 +13,7 @@ class DetailBookViewController: UIViewController {
     var bookItem: BookItem!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     static func createWithStoryboard(bookItem: BookItem) -> DetailBookViewController {
         let storyboard = UIStoryboard(name: "DetailBook", bundle: nil)
@@ -26,6 +27,7 @@ class DetailBookViewController: UIViewController {
 
         imageView.af_setImage(withURL: URL(string: (bookItem.imageUrl()))!)
         titleLabel.text = bookItem.volumeInfo?.title
+        descriptionLabel.text = bookItem.volumeInfo?.description
     }
 
     @IBAction func register(_ sender: Any) {
