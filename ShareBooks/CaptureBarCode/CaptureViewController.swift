@@ -13,10 +13,25 @@ import AVFoundation
 class CaptureViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     // カメラやマイクの入出力を管理するオブジェクトを生成
     private let session = AVCaptureSession()
+    @IBOutlet weak var iosSettingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        navigationItem.title = "バーコードから本を読み取る"
+        
+        let cameraMediaType = AVMediaType.video
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: cameraMediaType)
+
+        switch cameraAuthorizationStatus {
+            case .authorized, .notDetermined:
+                iosSettingButton.removeFromSuperview()
+                cameraSetup()
+            default: break
+        }
+    }
+    
+    private func cameraSetup() {
         let discoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: .video, position: .back)
         let devices = discoverySession.devices
         
@@ -93,5 +108,16 @@ class CaptureViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     // 閉じるが押されたら呼ばれます
     @objc func closeTaped(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func openAppSettings(_ sender: Any) {
+        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+            return
+        }
+
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)") // Prints true
+            })
+        }
     }
 }
