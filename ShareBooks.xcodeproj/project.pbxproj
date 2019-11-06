@@ -20,6 +20,7 @@
 		CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881B2316C1260029F5DB /* AccountViewController.swift */; };
 		CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */; };
 		CA4488202316C8A80029F5DB /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA44881F2316C8A80029F5DB /* UserManager.swift */; };
+		CA5B584B2370104D008F29B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA5B584A2370104D008F29B7 /* GoogleService-Info.plist */; };
 		CA7B49FB234E0F610098564B /* GroupSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B49F9234E0F610098564B /* GroupSettingViewController.swift */; };
 		CA7B49FC234E0F610098564B /* GroupSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B49FA234E0F610098564B /* GroupSettingViewController.xib */; };
 		CA7B49FF234E15770098564B /* GroupSettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B49FD234E15770098564B /* GroupSettingTableViewCell.swift */; };
@@ -39,7 +40,6 @@
 		CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B127230E2EE300DCEB34 /* Main.storyboard */; };
 		CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B12A230E2EE500DCEB34 /* Assets.xcassets */; };
 		CAB5B12E230E2EE500DCEB34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B12C230E2EE500DCEB34 /* LaunchScreen.storyboard */; };
-		CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */; };
 		CAB5B13D230E690300DCEB34 /* MailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B13C230E690300DCEB34 /* MailLoginViewController.swift */; };
 		CAB5B13F230E691100DCEB34 /* MailLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B13E230E691100DCEB34 /* MailLogin.storyboard */; };
 		CAB5B141230E6B3E00DCEB34 /* UIAlertController+Simple.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B140230E6B3E00DCEB34 /* UIAlertController+Simple.swift */; };
@@ -95,6 +95,7 @@
 		CA44881B2316C1260029F5DB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CA44881D2316C2440029F5DB /* MyPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewController.swift; sourceTree = "<group>"; };
 		CA44881F2316C8A80029F5DB /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		CA5B584A2370104D008F29B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA7B49F9234E0F610098564B /* GroupSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingViewController.swift; sourceTree = "<group>"; };
 		CA7B49FA234E0F610098564B /* GroupSettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroupSettingViewController.xib; sourceTree = "<group>"; };
 		CA7B49FD234E15770098564B /* GroupSettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSettingTableViewCell.swift; sourceTree = "<group>"; };
@@ -109,14 +110,13 @@
 		CA7B4A0E2351F3C00098564B /* JoinRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinRequestTableViewCell.xib; sourceTree = "<group>"; };
 		CA7B4A11235204590098564B /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
 		CA9515AA234B652100861D56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CAB5B120230E2EE300DCEB34 /* ShareBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAB5B120230E2EE300DCEB34 /* シェアブク.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "シェアブク.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CAB5B128230E2EE300DCEB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAB5B12A230E2EE500DCEB34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAB5B12D230E2EE500DCEB34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CAB5B12F230E2EE500DCEB34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CAB5B13B230E311E00DCEB34 /* ShareBooks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShareBooks.entitlements; sourceTree = "<group>"; };
 		CAB5B13C230E690300DCEB34 /* MailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailLoginViewController.swift; sourceTree = "<group>"; };
 		CAB5B13E230E691100DCEB34 /* MailLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MailLogin.storyboard; sourceTree = "<group>"; };
@@ -234,7 +234,7 @@
 		CAB5B121230E2EE300DCEB34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAB5B120230E2EE300DCEB34 /* ShareBooks.app */,
+				CAB5B120230E2EE300DCEB34 /* シェアブク.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,6 +242,7 @@
 		CAB5B122230E2EE300DCEB34 /* ShareBooks */ = {
 			isa = PBXGroup;
 			children = (
+				CA5B584A2370104D008F29B7 /* GoogleService-Info.plist */,
 				CA40C4EF2354C23900548A0C /* UIComponent */,
 				CA7B49F8234E0F420098564B /* GroupSetting */,
 				CAB5B146230E8C9400DCEB34 /* SearchBooks */,
@@ -254,7 +255,6 @@
 				CAC57543230EE73C00BF407E /* Model */,
 				CAB5B147230E8CA700DCEB34 /* Extensions */,
 				CAB5B13B230E311E00DCEB34 /* ShareBooks.entitlements */,
-				CAB5B139230E2F4200DCEB34 /* GoogleService-Info.plist */,
 				CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */,
 				CAB5B12A230E2EE500DCEB34 /* Assets.xcassets */,
 				CAB5B12C230E2EE500DCEB34 /* LaunchScreen.storyboard */,
@@ -387,7 +387,7 @@
 			);
 			name = ShareBooks;
 			productName = ShareBooks;
-			productReference = CAB5B120230E2EE300DCEB34 /* ShareBooks.app */;
+			productReference = CAB5B120230E2EE300DCEB34 /* シェアブク.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -440,6 +440,7 @@
 				CA7B49FC234E0F610098564B /* GroupSettingViewController.xib in Resources */,
 				CAC5754F23125FB400BF407E /* DetailBook.storyboard in Resources */,
 				CA7B4A08234F78DB0098564B /* JoinRequestViewController.xib in Resources */,
+				CA5B584B2370104D008F29B7 /* GoogleService-Info.plist in Resources */,
 				CA7B4A04234E2DDD0098564B /* BrowseGroupSettingViewController.xib in Resources */,
 				CAB5B14F230E908900DCEB34 /* SearchBooks.storyboard in Resources */,
 				CAF2AB692344D7A1006772B7 /* GroupBookshelf.storyboard in Resources */,
@@ -453,7 +454,6 @@
 				CA4488162316BF370029F5DB /* MyPage.storyboard in Resources */,
 				CA7B4A00234E15770098564B /* GroupSettingTableViewCell.xib in Resources */,
 				CA7B4A0C2351F0DF0098564B /* JoinRequestListViewController.xib in Resources */,
-				CAB5B13A230E2F4200DCEB34 /* GoogleService-Info.plist in Resources */,
 				CAB5B12B230E2EE500DCEB34 /* Assets.xcassets in Resources */,
 				CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */,
 				CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */,
@@ -758,12 +758,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B346P935N;
 				INFOPLIST_FILE = ShareBooks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.yyux.ShareBook;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharebuk;
+				PRODUCT_NAME = "シェアブク";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -778,12 +779,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2B346P935N;
 				INFOPLIST_FILE = ShareBooks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jp.yyux.ShareBook;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharebuk;
+				PRODUCT_NAME = "シェアブク";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
