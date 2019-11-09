@@ -16,15 +16,16 @@ class SearchBooksViewController: UIViewController {
     
     var index = 0
     var offset = 10
+    var collectionViewOffset = 0
     var searchWord: String?
     var isReloading = false
     var bookItems: [BookItem]? {
         didSet {
-            if index == 0  || index == 10 {
+            if index < 11 {
                 collectionView.reloadData()
             } else {
                 var indexPaths: [IndexPath] = []
-                for i in index - offset...index - 1 {
+                for i in bookItems!.count - collectionViewOffset...bookItems!.count - 1 {
                     indexPaths.append(IndexPath(row: i, section: 0))
                 }
                 collectionView.insertItems(at: indexPaths)
@@ -91,6 +92,7 @@ class SearchBooksViewController: UIViewController {
                 decoder.dateDecodingStrategy = .formatted(formatter)
                 let newBookItems = try! decoder.decode(Array<BookItem>.self, from: data!)
                 self.index = self.index + newBookItems.count
+                self.collectionViewOffset = newBookItems.count
                 if self.bookItems == nil {
                     self.bookItems = newBookItems
                 } else {
@@ -159,7 +161,7 @@ extension SearchBooksViewController: UISearchBarDelegate {
         self.collectionView.contentOffset = CGPoint(x: 0, y: -self.collectionView.contentInset.top);
         searchWord = searchBar.text!
         index = 0
-        offset = 10
+        collectionViewOffset = 0
         bookItems = nil
         requestBook()
     }

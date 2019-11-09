@@ -24,8 +24,7 @@ class DetailBookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageView.af_setImage(withURL: URL(string: (bookItem.imageUrl()))!)
+        imageView.setImageWithPlaceholder(url: bookItem.imageUrl())
         titleLabel.text = bookItem.volumeInfo?.title
         descriptionLabel.text = bookItem.volumeInfo?.description
     }

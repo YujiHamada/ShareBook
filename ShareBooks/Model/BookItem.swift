@@ -14,11 +14,14 @@ struct BookItem: Codable {
     var selfLink: String?
     var volumeInfo: VolumeInfo?
     
-    func imageUrl() -> String{
-        var comps = URLComponents(string: (volumeInfo?.imageLinks?.thumbnail)!)!
-        comps.scheme = "https"
-        var https = comps.string!
-        https += "&zoom=3"
-        return https
+    func imageUrl() -> URL? {
+        if let url = volumeInfo?.imageLinks?.thumbnail {
+            var comps = URLComponents(string: url)!
+            comps.scheme = "https"
+            var https = comps.string!
+            https += "&zoom=3"
+            return URL(string: https)
+        }
+        return nil
     }
 }

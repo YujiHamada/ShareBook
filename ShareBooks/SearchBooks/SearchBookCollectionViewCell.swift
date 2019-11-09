@@ -15,7 +15,7 @@ class SearchBookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     var bookItem: BookItem! {
         didSet{
-            imageView.af_setImage(withURL: URL(string: (bookItem.imageUrl()))!)
+            imageView.setImageWithPlaceholder(url: bookItem.imageUrl())
             titleLabel.text = bookItem.volumeInfo?.title
         }
     }

@@ -33,7 +33,7 @@ class ResultViewController: UIViewController {
                 decoder.dateDecodingStrategy = .formatted(formatter)
                 let bookItems = try! decoder.decode(Array<BookItem>.self, from: data!)
                 self.bookItem = bookItems[0]
-                self.imageView.af_setImage(withURL: URL(string: self.bookItem!.imageUrl())!)
+                self.imageView.setImageWithPlaceholder(url: self.bookItem?.imageUrl())
                 self.titleLabel.text = self.bookItem?.volumeInfo?.title
                 self.descriptionLabel.text = self.bookItem?.volumeInfo?.description
             }
