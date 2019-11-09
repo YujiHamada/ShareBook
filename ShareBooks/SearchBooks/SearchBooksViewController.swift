@@ -14,18 +14,18 @@ class SearchBooksViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var searchBar: UISearchBar!
     
-    var index = 0
     var offset = 10
     var collectionViewOffset = 0
     var searchWord: String?
     var isReloading = false
-    var bookItems: [BookItem]? {
+    var bookItems: [BookItem] = [] {
+        
         didSet {
-            if index < 11 {
+            if bookItems.count - collectionViewOffset == 0 {
                 collectionView.reloadData()
             } else {
                 var indexPaths: [IndexPath] = []
-                for i in bookItems!.count - collectionViewOffset...bookItems!.count - 1 {
+                for i in bookItems.count - collectionViewOffset...bookItems.count - 1 {
                     indexPaths.append(IndexPath(row: i, section: 0))
                 }
                 collectionView.insertItems(at: indexPaths)
@@ -68,7 +68,7 @@ class SearchBooksViewController: UIViewController {
         let url = "https://www.googleapis.com/books/v1/volumes"
         let parameters: Parameters = [
             "q": "intitle:" + searchWord,
-            "startIndex" : index,
+            "startIndex" : bookItems.count,
             "maxResults" : offset
         ]
         
@@ -76,7 +76,7 @@ class SearchBooksViewController: UIViewController {
             self.isReloading = false
             if let dict = response.result.value as? [String : Any] {
                 guard let items: [[String : Any]] = dict["items"] as? [[String : Any]]  else {
-                    if self.index == 0 {
+                    if self.bookItems.count == 0 {
                         let okAlert = UIAlertController.simpleOkAlert(title: "該当なし", message: "検索結果が0件でした")
                         self.present(okAlert, animated: true)
                     }
@@ -91,12 +91,11 @@ class SearchBooksViewController: UIViewController {
                 let decoder: JSONDecoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(formatter)
                 let newBookItems = try! decoder.decode(Array<BookItem>.self, from: data!)
-                self.index = self.index + newBookItems.count
                 self.collectionViewOffset = newBookItems.count
-                if self.bookItems == nil {
+                if self.bookItems.count == 0 {
                     self.bookItems = newBookItems
                 } else {
-                    self.bookItems = self.bookItems! + newBookItems
+                    self.bookItems = self.bookItems + newBookItems
                 }
             }
         }
@@ -119,18 +118,18 @@ class SearchBooksViewController: UIViewController {
 
 extension SearchBooksViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return bookItems?.count ?? 0
+        return bookItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let destinationViewController = DetailBookViewController.createWithStoryboard(bookItem: bookItems![indexPath.row])
+        let destinationViewController = DetailBookViewController.createWithStoryboard(bookItem: bookItems[indexPath.row])
         self.navigationController?.pushViewController(destinationViewController, animated: true)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SearchBookCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchBookCollectionViewCell", for: indexPath) as! SearchBookCollectionViewCell
         cell.imageView.image = nil
-        cell.bookItem = bookItems![indexPath.row]
+        cell.bookItem = bookItems[indexPath.row]
         return cell
     }
     
@@ -160,9 +159,8 @@ extension SearchBooksViewController: UISearchBarDelegate {
         searchBar.resignFirstResponder()
         self.collectionView.contentOffset = CGPoint(x: 0, y: -self.collectionView.contentInset.top);
         searchWord = searchBar.text!
-        index = 0
         collectionViewOffset = 0
-        bookItems = nil
+        bookItems = []
         requestBook()
     }
 }
