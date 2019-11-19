@@ -36,6 +36,9 @@
 		CA7B4A102351F3C00098564B /* JoinRequestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA7B4A0E2351F3C00098564B /* JoinRequestTableViewCell.xib */; };
 		CA7B4A12235204590098564B /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B4A11235204590098564B /* JoinRequest.swift */; };
 		CA9515AB234B652100861D56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9515AA234B652100861D56 /* User.swift */; };
+		CA9F9D4F2382CFAF00072FE5 /* MyBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F9D4D2382CFAE00072FE5 /* MyBookViewController.swift */; };
+		CA9F9D502382CFAF00072FE5 /* MyBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9F9D4E2382CFAE00072FE5 /* MyBookViewController.xib */; };
+		CA9F9D522382DA1800072FE5 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9F9D512382DA1800072FE5 /* Notification+Name.swift */; };
 		CAB5B124230E2EE300DCEB34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */; };
 		CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */; };
 		CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAB5B127230E2EE300DCEB34 /* Main.storyboard */; };
@@ -112,6 +115,9 @@
 		CA7B4A0E2351F3C00098564B /* JoinRequestTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinRequestTableViewCell.xib; sourceTree = "<group>"; };
 		CA7B4A11235204590098564B /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
 		CA9515AA234B652100861D56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CA9F9D4D2382CFAE00072FE5 /* MyBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookViewController.swift; sourceTree = "<group>"; };
+		CA9F9D4E2382CFAE00072FE5 /* MyBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyBookViewController.xib; sourceTree = "<group>"; };
+		CA9F9D512382DA1800072FE5 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		CAB5B120230E2EE300DCEB34 /* シェアブク.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "シェアブク.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB5B123230E2EE300DCEB34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB5B125230E2EE300DCEB34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -287,6 +293,7 @@
 				CAB5B140230E6B3E00DCEB34 /* UIAlertController+Simple.swift */,
 				CA40C4F6235EBAD800548A0C /* UIColor+hex.swift */,
 				CA5B584C23746A8C008F29B7 /* UIImageView+SetImage.swift */,
+				CA9F9D512382DA1800072FE5 /* Notification+Name.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -344,6 +351,8 @@
 				CAF2AB682344D7A1006772B7 /* GroupBookshelf.storyboard */,
 				CA40C4EB2354BFBE00548A0C /* BookDetailViewController.swift */,
 				CA40C4EC2354BFBE00548A0C /* BookDetailViewController.xib */,
+				CA9F9D4D2382CFAE00072FE5 /* MyBookViewController.swift */,
+				CA9F9D4E2382CFAE00072FE5 /* MyBookViewController.xib */,
 			);
 			path = Bookshelf;
 			sourceTree = "<group>";
@@ -461,6 +470,7 @@
 				CAB5B129230E2EE300DCEB34 /* Main.storyboard in Resources */,
 				CA44881A2316C11A0029F5DB /* Account.storyboard in Resources */,
 				CA40C4EA23549E8B00548A0C /* ProfileSettingViewController.xib in Resources */,
+				CA9F9D502382CFAF00072FE5 /* MyBookViewController.xib in Resources */,
 				CAC575542312C09A00BF407E /* Capture.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,6 +596,7 @@
 				CAE8FD352332655300613420 /* CreateGroupViewController.swift in Sources */,
 				CA40C4E923549E8B00548A0C /* ProfileSettingViewController.swift in Sources */,
 				CAB5B151230E948F00DCEB34 /* SearchBookCollectionViewCell.swift in Sources */,
+				CA9F9D522382DA1800072FE5 /* Notification+Name.swift in Sources */,
 				CAC5754723102AE900BF407E /* TabBarController.swift in Sources */,
 				CAD60AC323390947004D355F /* BookshelfTableViewCell.swift in Sources */,
 				CAF2AB6123438335006772B7 /* BookshelfCollectionView.swift in Sources */,
@@ -598,6 +609,7 @@
 				CAB5B126230E2EE300DCEB34 /* LoginViewController.swift in Sources */,
 				CA44881C2316C1260029F5DB /* AccountViewController.swift in Sources */,
 				CA5B584D23746A8C008F29B7 /* UIImageView+SetImage.swift in Sources */,
+				CA9F9D4F2382CFAF00072FE5 /* MyBookViewController.swift in Sources */,
 				CA7B4A0F2351F3C00098564B /* JoinRequestTableViewCell.swift in Sources */,
 				CA44881E2316C2440029F5DB /* MyPageTableViewController.swift in Sources */,
 				CA40C4ED2354BFBE00548A0C /* BookDetailViewController.swift in Sources */,

@@ -25,10 +25,12 @@ class BookshelfViewController: UIViewController {
         self.view.backgroundColor = .alabaster
         navigationItem.title = "自分の本棚"
         
+        NotificationCenter.default.addObserver(self, selector: #selector(requestBook), name: .reloadMyBookShelf, object: nil)
+        
         requestBook()
     }
     
-    func requestBook() {
+    @objc func requestBook() {
         RequestManager.shared.request(api: Api.myBookList) { (result: Result<Array<Book>, Error>) in
             self.refreshControl.endRefreshing()
             switch result {

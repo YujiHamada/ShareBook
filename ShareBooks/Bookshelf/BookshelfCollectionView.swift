@@ -24,6 +24,9 @@ class BookshelfCollectionView: UICollectionView, UICollectionViewDataSource, UIC
             let book = books![indexPath.row]
             if (book.users != nil) {
                 collectionView.parentViewController()?.navigationController?.pushViewController(BookDetailViewController(book: book), animated: true)
+            } else {
+                let myBookViewController = MyBookViewController(book: book)
+                collectionView.parentViewController()?.navigationController?.pushViewController(myBookViewController, animated: true)
             }
         }
 

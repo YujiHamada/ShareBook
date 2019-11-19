@@ -83,10 +83,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func handlePasswordlessSignIn(withURL url: URL) {
         let link = url.absoluteString
         if Auth.auth().isSignIn(withEmailLink: link) {
-            Auth.auth().signIn(withEmail: UserDefaults.standard.string(forKey: MailLoginViewController.authEmail)!, link: link) { (result, error) in
+            let email = UserDefaults.standard.string(forKey: MailLoginViewController.authEmail)!
+            Auth.auth().signIn(withEmail: email, link: link) { (result, error) in
                 if let error = error {
                     print(error)
                     return
+                }
+                
+                if let firebaseUser = Auth.auth().currentUser {
+                    let split = email.components(separatedBy: "@")
+                    let parameters: [String : Any] = [
+                        "mail": email,
+                        "name": split[0],
+                    ]
+                    RequestManager.shared.request(api: Api.signupin, parameters: parameters, completion: { (result) in
+                        UIApplication.topViewController()!.present(GroupTabViewController.createWithStoryboard(), animated: true)
+                    })
+                    
                 }
             }
         }

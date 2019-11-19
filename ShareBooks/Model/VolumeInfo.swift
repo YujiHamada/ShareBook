@@ -20,6 +20,16 @@ struct VolumeInfo: Codable {
     var previewLink: String?
     var infoLink: String?
     var canonicalVolumeLink: String?
+    var industryIdentifiers: Array<[String: String]>?
+    
+    func isbn() -> String? {
+        if let industryIdentifiers = industryIdentifiers {
+            let isbnDic = industryIdentifiers.last
+            return isbnDic?["identifier"]
+        }
+        
+        return nil
+    }
 }
 
 struct ImageLinks: Codable {

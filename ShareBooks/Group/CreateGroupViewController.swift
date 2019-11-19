@@ -48,7 +48,7 @@ class CreateGroupViewController: UIViewController {
                 })
                 self.present(alertController, animated: true)
                 
-            case .failure(let _):
+            case .failure(_):
                 let alertController = UIAlertController.simpleOkAlert(title: "", message: "グループ作成に失敗しました", handler: { action in
                     self.navigationController?.popViewController(animated: true)
                 })

@@ -26,8 +26,15 @@ class MailLoginViewController: UIViewController {
     }
     
     @IBAction func mailLogin(_ sender: Any) {
+        
+        if emailTextField.text!.isEmpty {
+            let alertController = UIAlertController.simpleOkAlert(title: "", message: "メールアドレスを入力してください")
+            self.present(alertController, animated: true, completion: nil)
+            return 
+        }
+        
         let actionCodeSettings = ActionCodeSettings()
-        actionCodeSettings.url = URL(string: "https://sharebook.page.link/sign_up")
+        actionCodeSettings.url = URL(string: "https://sharebuk.page.link/sign_up")
         actionCodeSettings.handleCodeInApp = true
         actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
         Auth.auth().sendSignInLink(toEmail: emailTextField.text!, actionCodeSettings: actionCodeSettings) { error in
@@ -42,14 +49,4 @@ class MailLoginViewController: UIViewController {
         }
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

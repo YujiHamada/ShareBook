@@ -33,8 +33,8 @@ class DetailBookViewController: UIViewController {
         
         let parameters: [String : Any] = [
             "name": bookItem.volumeInfo!.title!,
-            "isbn": bookItem.id!,
-            "description" : bookItem.volumeInfo!.description!,
+            "isbn": bookItem.volumeInfo!.isbn() ?? bookItem.id!,
+            "description" : bookItem.volumeInfo?.description ?? "",
             "link" : bookItem.volumeInfo!.imageLinks!.smallThumbnail!
         ]
         RequestManager.shared.request(api: Api.registerBook, parameters: parameters) { (result) in

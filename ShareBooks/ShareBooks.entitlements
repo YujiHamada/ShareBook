@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:sharebook.page.link</string>
+		<string>applinks:sharebuk.page.link</string>
 	</array>
 </dict>
 </plist>

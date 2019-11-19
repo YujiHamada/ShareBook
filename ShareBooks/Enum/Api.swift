@@ -23,6 +23,7 @@ enum Api {
     case closeAccount
     case userProfile
     case updateProfile
+    case removeMybook
     
     func parameterKey() -> String {
         switch self {
@@ -51,6 +52,8 @@ enum Api {
         case .userProfile:
             return "user"
         case .updateProfile:
+            return ""
+        case .removeMybook:
             return ""
         }
         
@@ -84,11 +87,14 @@ enum Api {
             return domain() + "/user/profile"
         case .updateProfile:
             return domain() + "/user/update"
+        case .removeMybook:
+            return domain() + "/user/remove/book"
         }
     }
     
     func domain() -> String {
-        return "http://3.115.103.72"
-//        return "http://192.168.1.5"
+//        return "http://sharebuk.com/"
+//        return "http://3.115.103.72";
+        return "http://192.168.1.5:10080"
     }
 }
