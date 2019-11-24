@@ -93,8 +93,8 @@ enum Api {
     }
     
     func domain() -> String {
-//        return "http://sharebuk.com/"
+        return "http://sharebuk.com/"
 //        return "http://3.115.103.72";
-        return "http://192.168.1.5:10080"
+//        return "http://192.168.1.5:10080"
     }
 }
