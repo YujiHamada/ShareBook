@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V0e-bf-k8N">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,37 +26,37 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Se-mN-IJV" customClass="GIDSignInButton">
-                                <rect key="frame" x="32" y="260" width="350" height="128"/>
+                                <rect key="frame" x="32" y="260" width="350" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="qp3-7N-nda"/>
+                                    <constraint firstAttribute="height" constant="40" id="qp3-7N-nda"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEo-Xc-PKV" customClass="ASAuthorizationAppleIDButton">
-                                <rect key="frame" x="32" y="420" width="350" height="70"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4G-ao-xi9">
+                                <rect key="frame" x="32" y="332" width="350" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="McM-bu-oUJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="SMi-Ff-lHq"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Wjt-UK-HeZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="N5f-7V-SZ7"/>
                             <constraint firstItem="Wjt-UK-HeZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P1w-O7-duj"/>
-                            <constraint firstItem="pEo-Xc-PKV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="SxP-WQ-HzU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Se-mN-IJV" secondAttribute="trailing" constant="32" id="VtP-FE-aor"/>
-                            <constraint firstItem="pEo-Xc-PKV" firstAttribute="top" secondItem="7Se-mN-IJV" secondAttribute="bottom" constant="32" id="kah-dh-TrD"/>
+                            <constraint firstItem="V4G-ao-xi9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YMQ-7f-uNv"/>
+                            <constraint firstItem="V4G-ao-xi9" firstAttribute="top" secondItem="7Se-mN-IJV" secondAttribute="bottom" constant="32" id="jaE-hp-eLZ"/>
                             <constraint firstItem="7Se-mN-IJV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="m7h-XV-ZF0"/>
-                            <constraint firstItem="pEo-Xc-PKV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="prw-6b-Tc6"/>
                             <constraint firstItem="7Se-mN-IJV" firstAttribute="top" secondItem="Wjt-UK-HeZ" secondAttribute="bottom" constant="32" id="qcJ-kJ-9Hy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wjt-UK-HeZ" secondAttribute="trailing" constant="32" id="rZj-6e-c3F"/>
+                            <constraint firstItem="V4G-ao-xi9" firstAttribute="leading" secondItem="Wjt-UK-HeZ" secondAttribute="leading" id="wKc-M3-11s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aqE-Aw-aIp"/>
                     <connections>
-                        <outlet property="appleSigninButton" destination="pEo-Xc-PKV" id="ykb-e3-z0a"/>
+                        <outlet property="appleSignInView" destination="V4G-ao-xi9" id="YLQ-s3-oXA"/>
                         <outlet property="googleSignInView" destination="7Se-mN-IJV" id="43S-AH-1RS"/>
                     </connections>
                 </viewController>

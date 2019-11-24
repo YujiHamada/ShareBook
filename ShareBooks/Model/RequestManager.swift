@@ -7,11 +7,9 @@
 //
 
 import Foundation
-
-
 import Foundation
 import Alamofire
-import FirebaseUI
+import FirebaseAuth
 
 struct RequestManager {
     static let shared = RequestManager()

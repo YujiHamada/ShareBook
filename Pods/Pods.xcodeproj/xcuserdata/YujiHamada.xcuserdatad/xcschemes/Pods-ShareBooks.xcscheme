@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1110"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CD9791A7B6C886AF255A190C73BB65BB"
+               BlueprintIdentifier = "09F4350AE1704ABB442FF4FA992CCEBF"
                BuildableName = "Pods_ShareBooks.framework"
                BlueprintName = "Pods-ShareBooks"
                ReferencedContainer = "container:Pods.xcodeproj">

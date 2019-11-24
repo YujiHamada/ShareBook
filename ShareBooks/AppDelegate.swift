@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseUI
 import FirebaseDynamicLinks
 import GoogleSignIn
 
@@ -68,14 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handled
     }
     
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+//        return GIDSignIn.sharedInstance().handle(url, sourceApplication:options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation: [:])
+//    }
     
     func handleOpenUrl(_ url: URL, sourceApplication: String?) -> Bool {
-        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
-            return true
-        }
         // other URL handling goes here.
         return false
     }

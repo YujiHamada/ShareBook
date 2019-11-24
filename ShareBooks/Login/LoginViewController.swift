@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseUI
 import GoogleSignIn
 import Alamofire
 import AuthenticationServices
@@ -17,8 +16,10 @@ import CryptoKit
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var googleSignInView: GIDSignInButton!
+    @IBOutlet weak var appleSignInView: UIView!
     fileprivate var currentNonce: String?
-    @IBOutlet weak var appleSigninButton: ASAuthorizationAppleIDButton!
+    
+    
     
     static func createWithStoryboard() -> LoginViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -31,17 +32,25 @@ class LoginViewController: UIViewController {
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().uiDelegate = self
         
         googleSignInView.isUserInteractionEnabled = true
         let gesture = UITapGestureRecognizer(target: self, action:  #selector (googleSignUp))
         googleSignInView.addGestureRecognizer(gesture)
         
         navigationItem.title = "ログイン・新規作成"
-        appleSigninButton.addTarget(self, action: #selector(startSignInWithAppleFlow), for: .touchUpInside)
+//        appleSigninButton.addTarget(self, action: #selector(startSignInWithAppleFlow), for: .touchUpInside)
+        
+//        appleSigninButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .black)
+        
+        let authorizationButton = ASAuthorizationAppleIDButton(authorizationButtonType: .default, authorizationButtonStyle: .black)
+        authorizationButton.addTarget(self, action: #selector(startSignInWithAppleFlow), for: .touchUpInside)
+//        authorizationButton.frame = CGRect(x: 32, y: googleSignInView.frame.origin.y + googleSignInView.frame.size.height, width: view.frame.size.width - 64, height: 50)
+        appleSignInView.addSubview(authorizationButton)
+        authorizationButton.frame = CGRect(x: 0, y: 0, width: view.frame.size.width - 64, height: appleSignInView.frame.size.height)
     }
     
     @objc func googleSignUp(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         GIDSignIn.sharedInstance().signIn()
     }
     
@@ -51,7 +60,7 @@ class LoginViewController: UIViewController {
     
 }
 
-extension LoginViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+extension LoginViewController: GIDSignInDelegate {
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
         // ...
@@ -105,7 +114,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
             // Initialize a Firebase credential.
             let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                       idToken: idTokenString,
-                                                      accessToken: nonce)
+                                                      rawNonce: nonce)
             // Sign in with Firebase.
             Auth.auth().signIn(with: credential) { (authResult, error) in
                 if let error = error {

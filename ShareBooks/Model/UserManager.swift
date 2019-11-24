@@ -11,7 +11,6 @@ import Firebase
 import FBSDKLoginKit
 import GoogleSignIn
 import Alamofire
-import FirebaseUI
 
 class UserManager {
     static let shared = UserManager()
@@ -57,8 +56,6 @@ class UserManager {
     func logout(){
         let firebaseAuth = Auth.auth()
         do {
-            let authUI = FUIAuth.defaultAuthUI()
-            try authUI!.signOut()
             try firebaseAuth.signOut()
             LoginManager().logOut()
             GIDSignIn.sharedInstance()?.signOut()
