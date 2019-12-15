@@ -19,8 +19,6 @@ struct Book: Codable {
     func imageUrl() -> String{
         var comps = URLComponents(string: link)!
         comps.scheme = "https"
-        var https = comps.string!
-        https += "&zoom=2"
-        return https
+        return comps.string!
     }
 }

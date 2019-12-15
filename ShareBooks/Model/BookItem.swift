@@ -18,9 +18,7 @@ struct BookItem: Codable {
         if let url = volumeInfo?.imageLinks?.thumbnail {
             var comps = URLComponents(string: url)!
             comps.scheme = "https"
-            var https = comps.string!
-            https += "&zoom=3"
-            return URL(string: https)
+            return URL(string: comps.string!)
         }
         return nil
     }
